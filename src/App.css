@@ -6,7 +6,7 @@
   grid-template-areas:
   'h h'
   'n c';
-  grid-template-rows: 60px 1fr;
+  grid-template-rows: 70px 1fr;
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px;
 }
@@ -17,7 +17,8 @@
 }
 
 .header img {
-  height: 40px;
+  height: 50px;
+  margin: 10px 0 0 10px;
 }
 
 .nav {

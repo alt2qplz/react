@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc519563-ad6d-4df0-9373-db663bbbb6af" name="Default Changelist" comment="" />
+    <list default="true" id="bc519563-ad6d-4df0-9373-db663bbbb6af" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Footer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tech.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,14 +35,22 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\react\projects\01-first-project\react-kabzda-1\src\components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\react\projects\01-first-project\react-kabzda-1\src\components" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -48,6 +63,8 @@
       <option name="presentableId" value="Default" />
       <updated>1585559164378</updated>
       <workItem from="1585559168667" duration="8496000" />
+      <workItem from="1585656101938" duration="3017000" />
+      <workItem from="1585660102535" duration="17000" />
     </task>
     <servers />
   </component>
@@ -63,13 +80,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="452" y="94" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1585567895102" />
-    <state x="283" y="59" key="SettingsEditor" timestamp="1585569442584">
+    <state x="283" y="59" key="SettingsEditor" timestamp="1585656627156">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="283" y="59" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585569442584" />
-    <state x="539" y="5" key="search.everywhere.popup" timestamp="1585563386325">
+    <state x="283" y="59" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585656627156" />
+    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1585656635703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="539" y="5" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585563386325" />
+    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585656635703" />
   </component>
 </project>
