@@ -1,0 +1,9 @@
+.content {
+    grid-area: c;
+}
+
+.profile_img {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}

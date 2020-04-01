@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc519563-ad6d-4df0-9373-db663bbbb6af" name="Default Changelist" comment="">
+    <list default="true" id="66e93105-e08d-4fa5-8191-f644ba4a3cb9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/Profile.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/polar_bear.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Footer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tech.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Tech.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,39 +30,48 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
+        <option value="Sass File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PREVIEW_PUSH_ON_COMMIT_AND_PUSH" value="false" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1ZqGMhs55QcaSKbaPd0kPJVpihY" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1ZwHszKrQCUkuzLPOhmN0A6qDf9" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Profile/MyPosts/Post" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.standard" value="" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\react\projects\01-first-project\react-kabzda-1\src\components" />
+      <recent name="C:\react\src\components\Profile\MyPosts\Post" />
+      <recent name="C:\react\src\components\Profile\MyPosts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\react\projects\01-first-project\react-kabzda-1\src\components" />
+      <recent name="C:\react\src\components\Profile" />
+      <recent name="C:\react\src\components\Navbar" />
+      <recent name="C:\react\src\components\Header" />
+      <recent name="C:\react\src\img" />
+      <recent name="C:\react\src\components" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -57,36 +79,37 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bc519563-ad6d-4df0-9373-db663bbbb6af" name="Default Changelist" comment="" />
-      <created>1585559164378</created>
+      <changelist id="66e93105-e08d-4fa5-8191-f644ba4a3cb9" name="Default Changelist" comment="" />
+      <created>1585743447037</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1585559164378</updated>
-      <workItem from="1585559168667" duration="8496000" />
-      <workItem from="1585656101938" duration="3017000" />
-      <workItem from="1585660102535" duration="17000" />
+      <updated>1585743447037</updated>
+      <workItem from="1585743449528" duration="10896000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="178" key="#ESLint" timestamp="1585559305716">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1585757149858">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="178" key="#ESLint/0.0.1920.1040@0.0.1920.1040" timestamp="1585559305716" />
-    <state x="452" y="94" key="#Notifications" timestamp="1585567895102">
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585757149858" />
+    <state x="343" y="40" key="SettingsEditor" timestamp="1585746767450">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="452" y="94" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1585567895102" />
-    <state x="283" y="59" key="SettingsEditor" timestamp="1585656627156">
+    <state x="343" y="40" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585746767450" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1585757129033">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="283" y="59" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585656627156" />
-    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1585656635703">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585757129033" />
+    <state x="629" y="118" width="661" height="804" key="find.popup" timestamp="1585757138709">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585656635703" />
+    <state x="629" y="118" width="661" height="804" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585757138709" />
   </component>
 </project>

@@ -1,32 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .app-wrapper {
   max-width: 1200px;
   margin: 0 auto;
+  margin-top: 10px;
   display: grid;
-
-  grid-template-areas:
-  'h h'
-  'n c';
+  grid-template-areas: 'h h' 'n c';
   grid-template-rows: 70px 1fr;
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px;
 }
 
-.header {
-  grid-area: h;
-  background-color: #785bff;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.header img {
-  height: 50px;
-  margin: 10px 0 0 10px;
-}
 
-.nav {
-  grid-area: n;
-  background-color: #6192dc;
-}
 
-.content {
-  grid-area: c;
-  background-color: #6c46dc;
-}
