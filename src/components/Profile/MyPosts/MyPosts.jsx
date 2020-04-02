@@ -5,11 +5,9 @@ import Post from "./Post/Post";
 const MyPosts = () => {
     return (
         <div>
-            <h2>My posts</h2>
-            <div>
-                New post
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <button>add post</button>
+            <div className={s.newpost}>
+                <textarea name="" placeholder='Написать новый пост...'/>
+                <button>Отправить</button>
             </div>
             <div>
                 <Post message='Привет' likes='10'/>

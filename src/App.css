@@ -1,17 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-weight: 300;
+}
+
+.app-wrapper-content {
+  grid-area: c;
+}
+
+button {
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
 }
 
 .app-wrapper {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   margin-top: 10px;
   display: grid;
   grid-template-areas: 'h h' 'n c';
-  grid-template-rows: 70px 1fr;
-  grid-template-columns: 2fr 10fr;
-  grid-gap: 10px;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 150px 1fr;
+  grid-gap: 20px;
 }
 
 a {

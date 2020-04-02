@@ -3,21 +3,21 @@ import s from './Navbar.module.css';
 
 const Navbar = () => {
     return (
-        <nav className={s.nav}>
-            <div className={s.item}>
-                <a href="">Profile</a>
-            </div>
+        <nav  className={s.nav}>
             <div className={`${s.item} ${s.active}`}>
-                <a href="">Messages</a>
+                <a href="/profile">Profile</a>
             </div>
             <div className={s.item}>
-                <a href="">News</a>
+                <a href="/dialogs">Messages</a>
             </div>
             <div className={s.item}>
-                <a href="">Music</a>
+                <a href="/news">News</a>
             </div>
             <div className={s.item}>
-                <a href="">Settings</a>
+                <a href="/music">Music</a>
+            </div>
+            <div className={s.item}>
+                <a href="/settings">Settings</a>
             </div>
         </nav>
     )
