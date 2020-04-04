@@ -1,5 +1,9 @@
 .dialogs {
-    width: 100%;
-    height: 500px;
-    background-color: #5445ed;
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+.names {
+    display: flex;
+    flex-direction: column;
 }
