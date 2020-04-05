@@ -1,0 +1,21 @@
+.sideFriends {
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid #2FBDFF;
+}
+
+.sideFriends h3 {
+    font-size: 16px;
+}
+
+.sideFriends .Friends {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.sideFriends .Friends img {
+    width: 60px;
+    border-radius: 100%;
+}

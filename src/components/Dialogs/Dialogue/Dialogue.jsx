@@ -9,15 +9,15 @@ const DialogItem = (props) => {
     let path = '/dialogs/' + props.id;
 
     return (
-        <NavLink to={path}>{props.name}</NavLink>
+        <div className={s.dialogItem}>
+            <NavLink to={path}><img src={props.avatar} alt=""/>{props.name}</NavLink>
+        </div>
     )
 };
 
 const Dialogue = (props) => {
 
-
-
-    let dialogs = props.dialogsData.map( d => <DialogItem name={d.name} id={d.id} />);
+    let dialogs = props.dialogsData.map( d => <DialogItem name={d.name} id={d.id} avatar={d.avatar}/>);
 
     return (
             <div className={s.names}>
