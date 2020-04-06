@@ -11,7 +11,7 @@ import Settings from "./components/Settings/Settings";
 
 
 const App = (props) => {
-
+    debugger;
     return (
             <div className='app-wrapper'>
                 <Header/>
@@ -22,7 +22,7 @@ const App = (props) => {
                            render={ () => (
                                <Profile profilePage={props.state.profilePage}
                                         addPost={props.addPost}
-                                        updateNewPostText={props.updateNewPostText}/>
+                                        updateNewPostText={props.updateNewPostText} />
                                         )
                            }
                     />

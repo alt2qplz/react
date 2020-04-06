@@ -1,4 +1,6 @@
-import {renderEntireTree} from "../render";
+let renderAll = () => {
+    console.log('123sdfa');
+};
 
 let state = {
     profilePage: {
@@ -28,7 +30,7 @@ let state = {
     }
 };
 
-export let addPost = () => {
+export const addPost = () => {
     let newPost = {
         id: 3,
         message: state.profilePage.newPostText,
@@ -37,12 +39,16 @@ export let addPost = () => {
 
     state.profilePage.postsData.push(newPost);
     state.profilePage.newPostText = '';
-    renderEntireTree(state);
+    renderAll(state);
 };
 
-export let updateNewPostText = (text) => {
+export const updateNewPostText = (text) => {
     state.profilePage.newPostText = text;
-    renderEntireTree(state);
+    renderAll(state);
+};
+
+export const subscribe = (observer) => {
+    renderAll = observer;
 };
 
 export default state;
