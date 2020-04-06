@@ -20,9 +20,19 @@ const Message = (props) => {
                 <MessageItem message={m.messege} avatar={m.avatar}/>)
         )
 
+    let newMessage = React.createRef();
+
+    let addMessage = () => {
+        let text = newMessage.current.value;
+        alert(text);
+    };
+
     return (
         <div className={s.messages}>
             {messages}
+
+            <textarea ref={newMessage} className={s.messageText}></textarea>
+            <button onClick={addMessage} className={s.messageButton}>Отправить</button>
         </div>
     )
 };

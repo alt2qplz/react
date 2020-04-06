@@ -44,3 +44,17 @@
     font-size: 20px;
     color: darkblue;
 }
+
+.messageText {
+    width: 100%;
+    height: 70px;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+.messageButton {
+    border-radius: 4px;
+    background-color: #2FBDFF;
+    padding: 10px;
+    color: #fff;
+}
