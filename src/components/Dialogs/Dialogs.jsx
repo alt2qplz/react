@@ -1,6 +1,6 @@
 import React from "react";
 import s from './Dialogs.module.css';
-import Message from "./Message/Message";
+import Messages from "./Messages/Messages";
 import Dialogue from "./Dialogue/Dialogue";
 
 
@@ -9,8 +9,8 @@ const Dialogs = (props) => {
 
     return (
         <div className={s.dialogs}>
-            <Dialogue dialogsData={props.state.dialogsData}/>
-            <Message messagesData={props.state.messagesData}/>
+            <Dialogue dialogsData={props.dialogsPage.dialogsData}/>
+            <Messages dialogsPage={props.dialogsPage} dispatch={props.dispatch}/>
         </div>
     )
 };
