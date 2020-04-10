@@ -2,7 +2,7 @@ import profileReducer from "./profile-reducer";
 import dialogReducer from "./dialogs-reducer";
 
 
-let store = {
+let storeOld = {
     _state: {
         profilePage: {
             postsData: [
@@ -53,4 +53,4 @@ let store = {
 
 };
 
-export default store;
+export default storeOld;
