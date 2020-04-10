@@ -7,21 +7,22 @@ const Navbar = (props) => {
     return (
         <div className={s.sideBar}>
             <nav  className={s.nav}>
-                <div className={`${s.item} ${s.active}`}>
-                    <NavLink to='/profile'>Profile</NavLink>
-                </div>
-                <div className={s.item}>
-                    <NavLink to="/dialogs">Messages</NavLink>
-                </div>
-                <div className={s.item}>
-                    <NavLink to="/news">News</NavLink>
-                </div>
-                <div className={s.item}>
-                    <NavLink to="/music">Music</NavLink>
-                </div>
-                <div className={s.item}>
-                    <NavLink to="/settings">Settings</NavLink>
-                </div>
+                <NavLink to='/profile' className={`${s.item} ${s.active}`}>
+                    Profile
+                </NavLink>
+                <NavLink to="/dialogs" className={s.item}>
+                    Messages
+                </NavLink>
+                <NavLink to="/news" className={s.item}>
+                    News
+                </NavLink>
+                <NavLink to="/music" className={s.item}>
+                    Music
+                </NavLink>
+                <NavLink to="/settings" className={s.item}>
+                    Settings
+                </NavLink>
+
             </nav>
             <MyFriends />
         </div>
