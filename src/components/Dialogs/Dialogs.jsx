@@ -1,7 +1,7 @@
 import React from "react";
 import s from './Dialogs.module.css';
-import Messages from "./Messages/Messages";
-import Dialogue from "./Dialogue/Dialogue";
+import MessagesContainer from "./Messages/MessagesContainer";
+import DialogueContainer from "./Dialogue/DialogueContainer";
 
 
 
@@ -9,8 +9,8 @@ const Dialogs = (props) => {
 
     return (
         <div className={s.dialogs}>
-            <Dialogue dialogsData={props.dialogsPage.dialogsData}/>
-            <Messages dialogsPage={props.dialogsPage} dispatch={props.dispatch}/>
+            <DialogueContainer store={props.store}/>
+            <MessagesContainer store={props.store}/>
         </div>
     )
 };

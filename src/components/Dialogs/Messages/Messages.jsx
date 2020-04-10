@@ -1,6 +1,5 @@
 import React from "react";
 import s from './../Dialogs.module.css';
-import {sendMessageCreator, updateNewMessageBodyCreator} from "../../../redux/dialogs-reducer";
 
 const MessageItem = (props) => {
     return (
@@ -14,31 +13,22 @@ const MessageItem = (props) => {
 const Messages = (props) => {
 
     let messages =
-        props.dialogsPage.messagesData.map(
+        props.messagesData.map(
             m => (m.senderMe === 1) ? (
                 <MessageItem message={m.messege} avatar={m.avatar} add_class='reverse'/>
             ) : (
                 <MessageItem message={m.messege} avatar={m.avatar}/>)
     );
 
-    let newMessage = props.dialogsPage.newMessage;
-
-    /*
-    let newMessage = React.createRef();
-
-    let addMessage = () => {
-        let text = newMessage.current.value;
-        alert(text);
-    };
-    */
+    let newMessage = props.newMessage;
 
     let onNewMessageChange = (e) => {
         let body = e.target.value;
-        props.dispatch(updateNewMessageBodyCreator(body));
+        props.onNewMessageChange(body);
     };
 
     let sendMessage = () => {
-        props.dispatch(sendMessageCreator())
+        props.sendMessage();
     };
 
 
