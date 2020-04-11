@@ -9,8 +9,8 @@ const Dialogs = (props) => {
 
     return (
         <div className={s.dialogs}>
-            <DialogueContainer store={props.store}/>
-            <MessagesContainer store={props.store}/>
+            <DialogueContainer />
+            <MessagesContainer />
         </div>
     )
 };

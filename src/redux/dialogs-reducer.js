@@ -24,19 +24,26 @@ let initialState = {
 
 const dialogReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SEND_MESSAGE:
+        case SEND_MESSAGE: {
+            let stateCopy = {...state};
+
             let newMessage = {
                 id: 1,
                 messege: state.newMessage,
                 avatar: 'https://static.tildacdn.com/tild6536-6139-4562-a430-346635653332/Group.png',
                 senderMe: 1
             };
-            state.messagesData.push(newMessage);
-            state.newMessage = '';
-            return state;
-        case UPDATE_NEW_MESSAGE_BODY:
-            state.newMessage = action.body;
-            return state;
+            stateCopy.messagesData = [...state.messagesData];
+            stateCopy.messagesData.push(newMessage);
+            stateCopy.newMessage = '';
+            return stateCopy;
+        }
+        case UPDATE_NEW_MESSAGE_BODY: {
+            let stateCopy = {...state}
+
+            stateCopy.newMessage = action.body;
+            return stateCopy;
+        }
         default:
             return state;
     }

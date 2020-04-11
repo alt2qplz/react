@@ -8,12 +8,14 @@ const deepCopy = (inObject) => {
         return inObject;
     }
 
-    outObject = Array.isArray(outObject) ? [] : {};
+    outObject = Array.isArray(inObject) ? [] : {};
 
     for (key in inObject) {
         value = inObject[key];
 
-        outObject[key] = (typeof value === 'object' && value !== null) ? deepCopy(value) : value;
+        outObject[key] =
+            (typeof value === 'object' && value !== null) ?
+                deepCopy(value) : value;
 
     }
 

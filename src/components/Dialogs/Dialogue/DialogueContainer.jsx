@@ -1,11 +1,19 @@
 import React from "react";
-import s from './../Dialogs.module.css';
 import Dialogue from "./Dialogue";
+import {connect} from "react-redux";
 
-const DialogueContainer = (props) => {
-    let state = props.store.getState();
-
-    return <Dialogue dialogsData={state.dialogsPage.dialogsData}/>
+const mapStateToProps = (state) => {
+    return {
+        dialogsData: state.dialogsPage.dialogsData
+    }
 };
+
+const mapDispatchToProps = (props) => {
+    return {
+
+    }
+};
+
+const DialogueContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogue);
 
 export default DialogueContainer;

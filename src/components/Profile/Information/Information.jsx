@@ -12,10 +12,7 @@ const Information = () => {
                         Alexander
                     </h2>
                     <p className={s.description}>
-                        Maecenas metus urna, sodales at est non, laoreet posuere erat. Suspendisse fringilla et
-                        quam sed tincidunt. Duis varius arcu lacus, quis maximus lacus faucibus ac. In hac habitasse platea dictumst.
-                        Praesent quis mauris a orci tristique pretium.
-                        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce gravida feugiat iaculis.
+                        REACT-REDUX SAMURAI
                     </p>
                 </div>
             </div>
