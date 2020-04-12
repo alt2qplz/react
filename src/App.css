@@ -8,6 +8,10 @@
   font-weight: 300;
 }
 
+*:focus {
+  outline: none;
+}
+
 .app-wrapper-content {
   grid-area: c;
 }
