@@ -8,19 +8,22 @@ const Navbar = (props) => {
         <div className={s.sideBar}>
             <nav  className={s.nav}>
                 <NavLink to='/profile' className={`${s.item} ${s.active}`}>
-                    Profile
+                    Мой профиль
                 </NavLink>
                 <NavLink to="/dialogs" className={s.item}>
-                    Messages
+                    Сообщения
+                </NavLink>
+                <NavLink to="/users" className={s.item}>
+                    Пользователи
                 </NavLink>
                 <NavLink to="/news" className={s.item}>
-                    News
+                    Новости
                 </NavLink>
                 <NavLink to="/music" className={s.item}>
-                    Music
+                    Музыка
                 </NavLink>
                 <NavLink to="/settings" className={s.item}>
-                    Settings
+                    Настройки
                 </NavLink>
 
             </nav>

@@ -3,7 +3,7 @@ import s from "./Information.module.css";
 
 const Information = () => {
     return (
-        <div>
+        <div className={s.profile}>
             <img className={s.profile_img} src={require('../../../img/ykk.png')}/>
             <div className={s.main_info}>
                 <img src={require('../../../img/polar_bear.jpg')} alt=""/>

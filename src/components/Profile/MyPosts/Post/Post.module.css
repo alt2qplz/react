@@ -1,14 +1,49 @@
 .item {
-    padding: 30px;
-    border: 1px solid #57bded;
-    border-radius: 4px;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    margin: 10px 0;
+    align-items: flex-start;
+    margin-top: 20px;
+
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 0px rgba(44, 101, 144, 0.1);
 }
 
-.item img {
+.item:nth-child(1) {
+    margin-top: 0px;
+}
+
+.message_likes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 70px;
+}
+
+.message {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.likes {
+    display: flex;
+    align-items: center;
+}
+
+.likes img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.likes p {
+    margin-top: 2px;
+    font-weight: 400;
+}
+
+.avatar {
     width: 70px;
     border-radius: 50%;
     margin-right: 20px;

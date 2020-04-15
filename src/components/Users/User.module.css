@@ -1,0 +1,72 @@
+.avatar {
+    width: 100px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.user {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    flex-shrink: 1;
+}
+
+
+.user_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.user_info div {
+    width: 740px;
+}
+
+.user_info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.user_info p {
+    word-wrap: break-word;
+    width: 740px;
+    height: 49px;
+    text-overflow: clip;
+}
+
+.user_info button {
+    padding: 6px 10px;
+    font-size: 14px;
+    background: #6AC0FF;
+    border-radius: 5px;
+    color: #FFFFFF;
+    transition: 0.3s;
+    font-weight: normal;
+    border: 1px solid #6AC0FF;
+    cursor: pointer;
+}
+
+.user_info button.follow:hover {
+    background: #669fdc;
+    border: 1px solid #669fdc;
+    cursor: pointer;
+}
+
+.user_info button.unsubscribe {
+    background: #fff;
+    color: #6AC0FF;
+    border: 1px solid #6AC0FF;
+}
+
+.selected {
+    color: red;
+}
