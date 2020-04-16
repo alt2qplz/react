@@ -1,5 +1,6 @@
 import React from "react";
 import s from './User.module.css';
+import Preloader from "../Common/Preloader/Preloader";
 
 const Users = (props) => {
 
@@ -19,7 +20,7 @@ const Users = (props) => {
     }
 
     return (
-        <div>
+        <>
             <div className={`${s.pagination} white-container`}>
                 {pages.map(p => {
                     return <div className={`${props.currentPage === p && s.selected} ${s.pagination_item}`}
@@ -52,7 +53,7 @@ const Users = (props) => {
                 )
                 }
             </div>
-        </div>
+        </>
     )
 };
 
