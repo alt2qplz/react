@@ -1,4 +1,4 @@
-const FOLLOW = 'FOLLOW';
+const SUBSCRIBE = 'SUBSCRIBE';
 const UNSUBSCRIBE = 'UNSUBSCRIBE';
 const SET_USERS = 'SET_USERS';
 const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
@@ -16,7 +16,7 @@ let initialState = {
 
 const usersReducer = (state = initialState, action) => {
     switch (action.type) {
-        case FOLLOW: {
+        case SUBSCRIBE: {
             return {
                 ...state,
                 users: state.users.map ( u => {
@@ -75,11 +75,11 @@ const usersReducer = (state = initialState, action) => {
 
 };
 
-export const followAC = (userId) => ({type: FOLLOW, userId});
-export const unsubscribeAC = (userId) => ({type: UNSUBSCRIBE, userId});
-export const setUsersAC = (users) => ({type: SET_USERS, users});
-export const setCurrentPageAC = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
-export const setTotalUsersCountAC = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, totalUsersCount});
-export const isFetchingToggleAC = (isFetching) => ({type: IS_FETCHING_TOGGLE, isFetching});
+export const follow = (userId) => ({type: SUBSCRIBE, userId});
+export const unsubscribe = (userId) => ({type: UNSUBSCRIBE, userId});
+export const setUsers = (users) => ({type: SET_USERS, users});
+export const setCurrentPage = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
+export const setTotalUsersCount = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, totalUsersCount});
+export const isFetchingToggle = (isFetching) => ({type: IS_FETCHING_TOGGLE, isFetching});
 
 export default usersReducer;

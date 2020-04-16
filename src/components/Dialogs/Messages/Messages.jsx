@@ -14,7 +14,7 @@ const Messages = (props) => {
 
     let messages =
         props.messagesData.map(
-            m => (m.senderMe === 1) ? (
+            m => m.senderMe ? (
                 <MessageItem message={m.messege} avatar={m.avatar} add_class='reverse'/>
             ) : (
                 <MessageItem message={m.messege} avatar={m.avatar}/>)
@@ -24,7 +24,7 @@ const Messages = (props) => {
 
     let onNewMessageChange = (e) => {
         let body = e.target.value;
-        props.onNewMessageChange(body);
+        props.updateNewMessageBody(body);
     };
 
     let sendMessage = () => {
