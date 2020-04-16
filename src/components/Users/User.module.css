@@ -7,15 +7,20 @@
 .wrapper {
     display: flex;
     justify-content: flex-start;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .user {
-    width: 100%;
+    width: calc(50% - 10px);
     display: flex;
     margin-bottom: 20px;
     margin-right: 20px;
     flex-shrink: 1;
+}
+
+.user:nth-child(even) {
+    margin-right: 0;
 }
 
 
@@ -27,7 +32,6 @@
 }
 
 .user_info div {
-    width: 740px;
 }
 
 .user_info h3 {
@@ -37,10 +41,6 @@
 }
 
 .user_info p {
-    word-wrap: break-word;
-    width: 740px;
-    height: 49px;
-    text-overflow: clip;
 }
 
 .user_info button {
@@ -67,6 +67,27 @@
     border: 1px solid #6AC0FF;
 }
 
+.pagination {
+    display: flex;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.pagination_item {
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    color: #6AC0FF;
+    border: 1px solid #6AC0FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
 .selected {
-    color: red;
+    background: #6AC0FF;
+    color: #FFFFFF;
 }

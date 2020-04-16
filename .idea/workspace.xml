@@ -2,33 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66e93105-e08d-4fa5-8191-f644ba4a3cb9" name="Default Changelist" comment="lesson 23 - refactoring">
-      <change afterPath="$PROJECT_DIR$/src/components/Users/User.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Users/Users.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/users-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogue/DialogueContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogue/DialogueContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/MyFriends/MyFriends.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/MyFriends/MyFriends.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Information/Information.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Information/Information.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Information/Information.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Information/Information.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/User.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/User.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/users-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="react" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -56,6 +43,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Users" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -68,7 +56,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -119,6 +107,8 @@
       <workItem from="1586826646712" duration="17000" />
       <workItem from="1586875990307" duration="1971000" />
       <workItem from="1586958527185" duration="11866000" />
+      <workItem from="1586997173737" duration="835000" />
+      <workItem from="1587046267789" duration="2736000" />
     </task>
     <servers />
   </component>
@@ -135,18 +125,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="452" y="95" key="#ESLint/0.0.1920.1040@0.0.1920.1040" timestamp="1585940412571" />
-    <state x="627" y="208" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586973865670">
+    <state x="627" y="208" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587050306922">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="627" y="208" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586973865670" />
+    <state x="627" y="208" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587050306922" />
     <state x="585" y="91" key="CommitChangelistDialog2" timestamp="1585934846344">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="91" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585934846344" />
-    <state x="318" y="92" width="1141" height="883" key="SettingsEditor" timestamp="1586002768334">
+    <state x="199" y="125" width="1141" height="883" key="SettingsEditor" timestamp="1586997454675">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="318" y="92" width="1141" height="883" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586002768334" />
+    <state x="199" y="125" width="1141" height="883" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586997454675" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1585757129033">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -159,19 +149,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="629" y="118" width="661" height="804" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585757138709" />
-    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1586112913700">
+    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1587050231836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586112913700" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/react-redux/es/components/Provider.js</url>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587050231836" />
   </component>
 </project>
