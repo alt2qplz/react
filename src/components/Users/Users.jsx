@@ -1,6 +1,7 @@
 import React from "react";
 import s from './User.module.css';
 import Preloader from "../Common/Preloader/Preloader";
+import {NavLink} from "react-router-dom";
 
 const Users = (props) => {
 
@@ -38,8 +39,12 @@ const Users = (props) => {
                     <div className={s.wrapper}>
                         {props.users.map(u =>
                             <div key={u.id} className={`${s.user} white-container`}>
+
+                                <NavLink to={'/profile/' + u.id}>
                                 <img src={u.photos.small != null ? u.photos.small : avatar} alt="avatar"
                                      className={s.avatar}/>
+                                </NavLink>
+
                                 <div className={s.user_info}>
                                     <div>
                                         <h3>{u.name}</h3>

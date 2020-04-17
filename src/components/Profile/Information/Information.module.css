@@ -39,5 +39,13 @@
 
 .main_info p {
     font-size: 16px;
-    font-weight: normal;
+    font-weight: 300;
+}
+
+.description {
+    margin-bottom: 10px;
+}
+
+.description b {
+    font-weight: 400;
 }
