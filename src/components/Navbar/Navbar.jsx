@@ -7,7 +7,7 @@ const Navbar = (props) => {
     return (
         <div className={s.sideBar}>
             <nav  className={s.nav}>
-                <NavLink to='/profile' className={`${s.item} ${s.active}`}>
+                <NavLink to={'/profile/' + (props.myId !== null ? props.myId : 2)} className={`${s.item} ${s.active}`}>
                     Мой профиль
                 </NavLink>
                 <NavLink to="/dialogs" className={s.item}>

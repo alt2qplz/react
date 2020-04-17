@@ -15,5 +15,7 @@
 }
 
 .header a {
-    color: #fff;
+    font-size: 18px;
+    color: #6AC0FF;
+    font-weight: 400;
 }

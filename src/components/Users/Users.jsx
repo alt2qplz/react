@@ -7,12 +7,14 @@ const Users = (props) => {
 
     let avatar = "https://www.w3schools.com/howto/img_avatar.png";
 
+
+    let pageCount = Math.ceil(props.totalUsersCount / props.pageSize);
     /*
-    let pageCount = Math.ceil(this.props.totalUsersCount / this.props.pageSize);
     ОЧЕНЬ МНОГО НАРОДУ В РЕАЛЕ - СДЕЛАЮ ПОКА ПОМЕНЬШЕ
-    */
+
 
     let pageCount = Math.ceil(200 / props.pageSize);
+    */
 
     let pages = [];
 
