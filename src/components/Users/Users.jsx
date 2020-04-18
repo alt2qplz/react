@@ -3,6 +3,7 @@ import s from './User.module.css';
 import Preloader from "../Common/Preloader/Preloader";
 import {NavLink} from "react-router-dom";
 import {followAPI} from "../../api/api";
+import {isFollowingProgress} from "../../redux/users-reducer";
 
 const Users = (props) => {
 
@@ -46,29 +47,25 @@ const Users = (props) => {
                                     <p>{u.status != null ? u.status : 'Тут будет статус'}</p>
                                 </div>
                                 {u.followed ?
-                                    <button className={s.unsubscribe} onClick={() => {
-
-
+                                    <button disabled={props.followingInProgress.some(id => id === u.id)} className={s.unsubscribe} onClick={() => {
+                                        props.isFollowingProgress(true, u.id);
                                         followAPI.unsubscribe(u.id)
-
-
                                             .then(data => {
                                                 if (data.resultCode === 0) {
                                                     props.unsubscribe(u.id)
                                                 }
+                                                props.isFollowingProgress(false, u.id)
                                             });
                                     }}>Отписаться</button>
                                     :
-                                    <button className={s.follow} onClick={() => {
-
-
+                                    <button disabled={props.followingInProgress.some(id => id === u.id)} className={s.follow} onClick={() => {
+                                        props.isFollowingProgress(true, u.id);
                                         followAPI.follow(u.id)
-
-
                                             .then(data => {
                                                 if (data.resultCode === 0) {
                                                     props.follow(u.id)
                                                 }
+                                                props.isFollowingProgress(false, u.id)
                                             });
                                     }}>Подписаться</button>
                                 }

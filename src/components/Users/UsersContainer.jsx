@@ -2,6 +2,7 @@ import React from "react";
 import {
     follow,
     isFetchingToggle,
+    isFollowingProgress,
     setCurrentPage,
     setTotalUsersCount,
     setUsers,
@@ -33,10 +34,7 @@ class UsersContainer extends React.Component {
     };
 
     render = () => {
-        return <Users {...this.props}
-                      props={this.props}
-                      onPageChanged={this.onPageChanged}
-            />
+        return <Users {...this.props} onPageChanged={this.onPageChanged} />
     }
 
 };
@@ -47,9 +45,10 @@ const mapStateToProps = (state) => {
         pageSize: state.usersPage.pageSize,
         totalUsersCount: state.usersPage.totalUsersCount,
         currentPage: state.usersPage.currentPage,
-        isFetching: state.usersPage.isFetching
+        isFetching: state.usersPage.isFetching,
+        followingInProgress: state.usersPage.followingInProgress
     }
 };
 
 export default connect(mapStateToProps,
-    {follow, isFetchingToggle, setCurrentPage, setTotalUsersCount, setUsers, unsubscribe})(UsersContainer);
+    {follow, isFetchingToggle, setCurrentPage, setTotalUsersCount, setUsers, unsubscribe, isFollowingProgress})(UsersContainer);
