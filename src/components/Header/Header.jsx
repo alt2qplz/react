@@ -1,5 +1,6 @@
 import React from "react";
 import s from './Header.module.css';
+import {NavLink} from "react-router-dom";
 
 const Header = (props) => {
 
@@ -14,7 +15,7 @@ const Header = (props) => {
                     <p>email: <a href="#">{props.email}</a></p>
                     <p>login: <a href="#">{props.login}</a></p>
             </div>
-                : <a href="https://social-network.samuraijs.com/login" className={s.login}>login</a>}
+                : <NavLink to='/login' className={s.login}>login</NavLink>}
 
 
 

@@ -10,6 +10,4 @@ let mapStateToProps = (state) => {
     }
 };
 
-export default connect(mapStateToProps, {
-    sendMessage, updateNewMessageBody
-})(Messages);
+export default connect(mapStateToProps, {sendMessage, updateNewMessageBody})(Messages);
