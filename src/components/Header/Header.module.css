@@ -19,3 +19,16 @@
     color: #6AC0FF;
     font-weight: 400;
 }
+
+a.login {
+    color: #ff4756;
+}
+
+.base_info {
+    display: flex;
+}
+
+.base_info p {
+    font-size: 18px;
+    margin-left: 10px;
+}
