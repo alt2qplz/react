@@ -18,7 +18,7 @@
     font-weight: 400;
 }
 
-a.item:active, a.item:focus {
+a.activeLink {
     background: #F5FBFF;
     border-radius: 4px;
     color: #6AC0FF;

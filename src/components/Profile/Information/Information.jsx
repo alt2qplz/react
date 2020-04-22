@@ -19,7 +19,9 @@ const Information = (props) => {
                     <h2 className={s.name}>
                         {props.profile.fullName}
                     </h2>
-                    <ProfileStatus status={props.status}/>
+
+                    <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
+
                     <div className={s.description}>
                         <p>
                             Обо мне:

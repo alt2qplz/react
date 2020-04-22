@@ -7,22 +7,22 @@ const Navbar = (props) => {
     return (
         <div className={s.sideBar}>
             <nav  className={s.nav}>
-                <NavLink to={'/profile/' + (props.myId !== null ? props.myId : 2)} className={`${s.item} ${s.active}`}>
+                <NavLink to={'/profile/' + (props.myId !== null ? props.myId : 2)} activeClassName={s.activeLink} className={s.item}>
                     Мой профиль
                 </NavLink>
-                <NavLink to="/dialogs" className={s.item}>
+                <NavLink to="/dialogs" className={s.item} activeClassName={s.activeLink}>
                     Сообщения
                 </NavLink>
-                <NavLink to="/users" className={s.item}>
+                <NavLink to="/users" className={s.item} activeClassName={s.activeLink}>
                     Пользователи
                 </NavLink>
-                <NavLink to="/news" className={s.item}>
+                <NavLink to="/news" className={s.item} activeClassName={s.activeLink}>
                     Новости
                 </NavLink>
-                <NavLink to="/music" className={s.item}>
+                <NavLink to="/music" className={s.item} activeClassName={s.activeLink}>
                     Музыка
                 </NavLink>
-                <NavLink to="/settings" className={s.item}>
+                <NavLink to="/settings" className={s.item} activeClassName={s.activeLink}>
                     Настройки
                 </NavLink>
 
