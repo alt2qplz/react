@@ -42,7 +42,7 @@ const Users = (props) => {
                             <div className={s.user_info}>
                                 <div>
                                     <h3>{u.name}</h3>
-                                    <p>{u.status != null ? u.status : 'Тут будет статус'}</p>
+                                    <p>{u.status != null ? u.status : ' '}</p>
                                 </div>
                                 {u.followed ?
                                     <button disabled={props.followingInProgress.some(id => id === u.id)}
