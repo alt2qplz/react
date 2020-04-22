@@ -9,7 +9,7 @@ import {compose} from "redux";
 const Dialogs = (props) => {
 
     return (
-        <div className={s.dialogs}>
+        <div className={`${s.dialogs}`}>
             <DialogueContainer />
             <MessagesContainer />
         </div>
@@ -22,5 +22,5 @@ let mapStateToProps = (state) => {
 
 export default compose(
     connect(mapStateToProps, {}),
-    withAuthRedirect
+    //withAuthRedirect
 )(Dialogs);

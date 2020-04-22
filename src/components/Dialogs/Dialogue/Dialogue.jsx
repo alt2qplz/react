@@ -20,7 +20,7 @@ const Dialogue = (props) => {
     let dialogs = props.dialogsData.map( d => <DialogItem name={d.name} id={d.id} avatar={d.avatar}/>);
 
     return (
-            <div className={s.names}>
+            <div className={`${s.names} white-container`}>
                 { dialogs }
             </div>
     )

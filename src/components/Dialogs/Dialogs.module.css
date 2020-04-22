@@ -1,22 +1,26 @@
 .dialogs {
-    display: grid;
-    grid-template-columns: 3fr 7fr;
+    display: flex;
+    align-items: flex-start;
 }
 
 .names {
     display: flex;
     flex-direction: column;
+    margin-right: 20px;
+    padding: 10px 20px;
+    width: 200px;
 }
 
 .dialogItem {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin: 10px 0px;
 }
 
 .dialogItem img {
-    max-width: 100px;
+    width: 60px;
     margin-right: 15px;
+    border-radius: 5px;
 }
 
 .dialogItem a {
@@ -24,20 +28,28 @@
     align-items: center;
 }
 
-.messages {
-    border-radius: 4px;
-    border: 1px solid #2FBDFF;
-    padding: 20px;
+
+.messagesBody {
+    width: 470px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+.newMessageForm {
+    margin-top: 20px;
 }
 
 .messageItem {
-     display: flex;
-     align-items: center;
- }
-
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
 
 .messageItem img {
-    width: 50px;
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
 }
 
 .messageItem p {
@@ -46,17 +58,24 @@
 }
 
 .messageText {
-    width: 100%;
-    height: 70px;
-    resize: none;
-    margin-bottom: 10px;
-    padding: 10px;
     font-size: 18px;
+    width: 100%;
+    padding: 0px;
+    border: none;
+    resize: none;
+    min-height: 50px;
+    margin-bottom: 10px;
+    overflow: auto;
 }
 
 .messageButton {
+    width: 144px;
+    height: 41px;
+    background: #2FBDFF;
     border-radius: 4px;
-    background-color: #2FBDFF;
-    padding: 10px;
-    color: #fff;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #FFFFFF;
+    transition: 0.3s;
 }
