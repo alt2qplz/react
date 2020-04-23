@@ -1,0 +1,27 @@
+.loginFormWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+}
+
+.loginForm {
+    width: 200px;
+}
+
+.loginButton {
+    width: 144px;
+    height: 41px;
+    background: #2FBDFF;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #FFFFFF;
+    transition: 0.3s;
+}
+
+.checkBox {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}

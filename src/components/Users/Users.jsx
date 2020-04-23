@@ -1,6 +1,6 @@
 import React from "react";
 import s from './User.module.css';
-import Preloader from "../Common/Preloader/Preloader";
+import Preloader from "../common/Preloader/Preloader";
 import {NavLink} from "react-router-dom";
 
 const Users = (props) => {

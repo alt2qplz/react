@@ -1,20 +1,26 @@
 import React from "react";
 import {Field, reduxForm} from 'redux-form';
+import {maxLength15, required} from "../../utils/validators";
+import {InputStandard} from "../common/FormControls/FormControls";
+import s from './Login.module.css';
+
 
 let LoginForm = (props) => {
     return (
-        <form onSubmit={props.handleSubmit}>
+        <form onSubmit={props.handleSubmit} className={s.loginForm}>
             <div>
-                <Field type={'text'} name={'Login'} component={'input'} placeholder={'Login here'}/>
+                <Field type={'text'} name={'Login'} component={InputStandard} placeholder={'Логин'}
+                       validate={[required, maxLength15]}/>
             </div>
             <div>
-                <Field type={'text'} name={'Password'} component={'input'} placeholder={'Pass here'}/>
+                <Field type={'text'} name={'Password'} component={InputStandard} placeholder={'Пароль'}
+                       validate={[required, maxLength15]}/>
             </div>
             <div>
-                <Field type={'checkbox'} name={'RememberPassword'} component={'input'}/>
-                RememberME
+                <Field type={'checkbox'} name={'RememberPassword'} component={'input'} className={s.checkBox}/>
+                Запомнить меня
             </div>
-            <button>login</button>
+            <button className={s.loginButton}>ВОЙТИ</button>
         </form>
     )
 };
@@ -30,7 +36,7 @@ const Login = (props) => {
     };
 
     return (
-        <div className={`white-container`}>
+        <div className={`${s.loginFormWrap} white-container`}>
             <LoginForm onSubmit={submit}/>
         </div>
     )

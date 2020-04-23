@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66e93105-e08d-4fa5-8191-f644ba4a3cb9" name="Default Changelist" comment="lesson 23 - refactoring">
+      <change afterPath="$PROJECT_DIR$/src/components/Login/Login.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/FormControls/FormControls.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/FormControls/FormControls.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/validators.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Common/Preloader/Preloader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Preloader/Preloader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Common/Preloader/Preloader.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Preloader/Preloader.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Information/Information.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Information/Information.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +120,7 @@
       <workItem from="1587468534569" duration="227000" />
       <workItem from="1587473281440" duration="735000" />
       <workItem from="1587483168489" duration="16992000" />
-      <workItem from="1587595792333" duration="1279000" />
+      <workItem from="1587595792333" duration="7791000" />
     </task>
     <servers />
   </component>
