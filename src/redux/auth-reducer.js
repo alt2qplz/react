@@ -1,4 +1,5 @@
 import {authAPI} from "../api/api";
+import {stopSubmit} from "redux-form";
 
 const SET_AUTH_USER_DATA = 'SET_AUTH_USER_DATA';
 
@@ -26,7 +27,7 @@ export const setAuthUserData = (id, email, login, isAuth) => ({type: SET_AUTH_US
 
 export const getAuthUserData = () => {
     return (dispatch) => {
-        authAPI.getAuthMe()
+        return authAPI.getAuthMe()
             .then(response => {
                 if (response.data.resultCode === 0) {
                     let {id, email, login} = response.data.data;
@@ -42,6 +43,9 @@ export const login = (email, password, rememberMe) => {
             .then(response => {
                 if (response.data.resultCode === 0) {
                     dispatch(getAuthUserData())
+                } else {
+                    let message = response.data.messages.length > 0 ? response.data.messages[0] : 'Some error';
+                    dispatch(stopSubmit('login', {_error: message}))
                 }
             })
     }

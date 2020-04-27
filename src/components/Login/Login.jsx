@@ -23,6 +23,9 @@ let LoginForm = (props) => {
                 <Field type={'checkbox'} name={'rememberMe'} component={'input'} className={s.checkBox}/>
                 Запомнить меня
             </div>
+            {props.error && <div className={s.errorWrap}>
+                <p>{props.error}</p>
+            </div>}
             <button className={s.loginButton}>ВОЙТИ</button>
         </form>
     )
