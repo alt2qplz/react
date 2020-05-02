@@ -18,46 +18,48 @@ let state = {
     profileStatus: ""
 };
 
-test('add post', () => {
-    //1. test data
-    let action = addPost('newPost');
+describe('profile-reducer test', () => {
+    test('add post', () => {
+        //1. test data
+        let action = addPost('newPost');
 
-    //2. action
-    let newState = profileReducer(state, action);
+        //2. action
+        let newState = profileReducer(state, action);
 
-    //3. expectation
-    expect(newState.postsData.length).toBe(2)
-});
+        //3. expectation
+        expect(newState.postsData.length).toBe(2)
+    });
 
-test('new post text is correct', () => {
-    //1. test data
-    let action = addPost('newPost');
+    test('new post text is correct', () => {
+        //1. test data
+        let action = addPost('newPost');
 
-    //2. action
-    let newState = profileReducer(state, action);
+        //2. action
+        let newState = profileReducer(state, action);
 
-    //3. expectation
-    expect(newState.postsData[1].message).toBe('newPost')
-});
+        //3. expectation
+        expect(newState.postsData[1].message).toBe('newPost')
+    });
 
-test('new post likes count is zero', () => {
-    //1. test data
-    let action = addPost('newPost');
+    test('new post likes count is zero', () => {
+        //1. test data
+        let action = addPost('newPost');
 
-    //2. action
-    let newState = profileReducer(state, action);
+        //2. action
+        let newState = profileReducer(state, action);
 
-    //3. expectation
-    expect(newState.postsData[1].likes).toBe(0)
-});
+        //3. expectation
+        expect(newState.postsData[1].likes).toBe(0)
+    });
 
-test('delete post', () => {
-    //1. test data
-    let action = deletePost(1);
+    test('delete post', () => {
+        //1. test data
+        let action = deletePost(1);
 
-    //2. action
-    let newState = profileReducer(state, action);
+        //2. action
+        let newState = profileReducer(state, action);
 
-    //3. expectation
-    expect(newState.postsData.length).toBe(0)
+        //3. expectation
+        expect(newState.postsData.length).toBe(0)
+    });
 });
