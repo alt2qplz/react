@@ -1,8 +1,9 @@
 import {profileAPI} from "../api/api";
 
-const ADD_POST = 'ADD-POST';
-const SET_USER_PROFILE = 'SET_USER_PROFILE';
-const SET_USER_PROFILE_STATUS = 'SET_USER_PROFILE_STATUS';
+const ADD_POST = 'profile/ADD-POST';
+const SET_USER_PROFILE = 'profile/SET_USER_PROFILE';
+const SET_USER_PROFILE_STATUS = 'profile/SET_USER_PROFILE_STATUS';
+const DELETE_POST = 'profile/DELETE_POST';
 
 let initialState = {
     postsData: [
@@ -24,12 +25,18 @@ let initialState = {
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_POST: {
-                return {
-                    ...state,
-                    postsData: [...state.postsData, {id: 3, likes: 0, message: action.newPostText}],
-                    newPostText: ''
-                }
+            return {
+                ...state,
+                postsData: [...state.postsData, {id: 2, likes: 0, message: action.newPostText}],
+                newPostText: ''
+            }
 
+        }
+        case DELETE_POST: {
+            return {
+                ...state,
+                postsData: [...state.postsData.filter(e => e.id !== action.postId)]
+            }
         }
         case SET_USER_PROFILE: {
             return {
@@ -54,36 +61,24 @@ const profileReducer = (state = initialState, action) => {
 
 
 export const addPost = (newPostText) => ({type: ADD_POST, newPostText});
+export const deletePost = (postId) => ({type: DELETE_POST, postId});
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
 export const setUserProfileStatus = (status) => ({type: SET_USER_PROFILE_STATUS, status});
 
-
-export const getProfile = (userId) => {
-    return (dispatch) => {
-        profileAPI.getProfileInfo(userId)
-            .then(response => {
-                dispatch(setUserProfile(response.data));
-            });
-    }
+export const getProfile = userId => async dispatch => {
+    const response = await profileAPI.getProfileInfo(userId);
+    dispatch(setUserProfile(response.data));
 };
 
-export const getStatus = (userId) => {
-    return (dispatch) => {
-        profileAPI.getProfileStatus(userId)
-            .then(response => {
-                dispatch(setUserProfileStatus(response.data))
-            })
-    }
+export const getStatus = userId => async dispatch => {
+    const response = await profileAPI.getProfileStatus(userId);
+    dispatch(setUserProfileStatus(response.data))
 };
 
-export const updateStatus = (status) => {
-    return (dispatch) => {
-        profileAPI.updateProfileStatus(status)
-            .then(response => {
-                if (response.data.resultCode === 0) {
-                    dispatch(setUserProfileStatus(status))
-                }
-            })
+export const updateStatus = status => async dispatch => {
+    const response = await profileAPI.updateProfileStatus(status);
+    if (response.data.resultCode === 0) {
+        dispatch(setUserProfileStatus(status))
     }
 };
 

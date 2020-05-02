@@ -1,9 +1,7 @@
 TOP
 
 JS
-
 React
-
 Redux
 
 
@@ -12,23 +10,9 @@ Redux
 Дополнительно
 
 SSH / HTTPS
-
 SCSS / SASS
-
-Слепая печать на ENG
 
 GIT
 
-Bootstrap
-
-БЭМ
-
-NPM
-
 Webpack
-
 TypeScript
-
-Функциональное программирование
-
-ECSStractor для sublime
