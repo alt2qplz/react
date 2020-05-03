@@ -2,30 +2,17 @@ import React from "react";
 import s from './User.module.css';
 import Preloader from "../common/Preloader/Preloader";
 import {NavLink} from "react-router-dom";
+import Paginator from "../common/Paginator/Paginator";
 
 const Users = (props) => {
 
     let avatar = "https://www.w3schools.com/howto/img_avatar.png";
 
-    let pageCount = Math.ceil(props.totalUsersCount / props.pageSize);
-
-    let pages = [];
-
-    for (let i = 1; i <= pageCount; i++) {
-        pages.push(i)
-    }
-
     return (
         <>
-
-            <div className={`${s.pagination} white-container`}>
-                {pages.map(p => {
-                    return <div className={`${props.currentPage === p && s.selected} ${s.pagination_item}`}
-                                onClick={(e) => {
-                                    props.onPageChanged(p)
-                                }}>{p}</div>
-                })}
-            </div>
+            <Paginator totalUsersCount={props.totalUsersCount} pageSize={props.pageSize}
+                       onPageChanged={props.onPageChanged} currentPage={props.currentPage}
+            />
 
             {props.isFetching ?
                 <Preloader/>

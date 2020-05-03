@@ -17,13 +17,13 @@ const Navbar = (props) => {
                     Пользователи
                 </NavLink>
                 <NavLink to="/news" className={s.item} activeClassName={s.activeLink}>
-                    Новости
+                    Форма?
                 </NavLink>
                 <NavLink to="/music" className={s.item} activeClassName={s.activeLink}>
-                    Музыка
+                    Чекбоксы
                 </NavLink>
                 <NavLink to="/settings" className={s.item} activeClassName={s.activeLink}>
-                    Настройки
+                    Гриды
                 </NavLink>
 
             </nav>
