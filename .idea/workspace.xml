@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66e93105-e08d-4fa5-8191-f644ba4a3cb9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/User.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/User.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/app-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/app-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Information/Information.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Information/Information.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Information/Information.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Information/Information.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -106,19 +105,6 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="ProfileStatus component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/components/Profile/Information/ProfileStatus.test.jsx" />
-      <test-names>
-        <test-name value="ProfileStatus component" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <configuration name="ProfileStatus" type="JavaScriptTestRunnerJest" temporary="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -146,6 +132,16 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -158,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="Jest.ProfileStatus component (1)" />
         <item itemvalue="Jest.profile-reducer test" />
         <item itemvalue="npm.test" />
         <item itemvalue="Jest.ProfileStatus" />
-        <item itemvalue="Jest.ProfileStatus component" />
       </list>
     </recent_temporary>
   </component>
@@ -221,7 +217,9 @@
       <workItem from="1588245120640" duration="3563000" />
       <workItem from="1588258891780" duration="2874000" />
       <workItem from="1588410848068" duration="8927000" />
-      <workItem from="1588504970340" duration="8414000" />
+      <workItem from="1588504970340" duration="9013000" />
+      <workItem from="1588605610803" duration="2173000" />
+      <workItem from="1588677719843" duration="7669000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 85 - hooks, useState, useEffect">
       <created>1588111720907</created>
