@@ -8,6 +8,8 @@ import Preloader from "./components/common/Preloader/Preloader";
 import store from "./redux/redux-store";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import NavbarContainer from "./components/Navbar/NavbarContainer";
+import {getFriends} from "./redux/users-reducer";
+
 
 //import ProfileContainer from "./components/Profile/ProfileContainer";
 const ProfileContainer = lazy(() => import('./components/Profile/ProfileContainer'));
@@ -15,20 +17,14 @@ const ProfileContainer = lazy(() => import('./components/Profile/ProfileContaine
 //import Dialogs from "./components/Dialogs/Dialogs";
 const Dialogs = lazy(() => import('./components/Dialogs/Dialogs'));
 
-//import News from "./components/News/News";
-const News = lazy(() => import('./components/News/News'));
-
-//import Music from "./components/Music/Music";
-const Music = lazy(() => import('./components/Music/Music'));
-
-//import Settings from "./components/Settings/Settings";
-const Settings = lazy(() => import('./components/Settings/Settings'));
-
-//import UsersContainer from "./components/Users/UsersContainer";
+//import UsersContainer from "./components/Friends/UsersContainer";
 const UsersContainer = lazy(() => import('./components/Users/UsersContainer'));
 
 //import Login from "./components/Login/Login";
 const Login = lazy(() => import('./components/Login/Login'));
+
+//import FriendsContainer from "./components/Friends/FriendsContainer";
+const FriendsContainer = lazy(() => import('./components/Friends/FriendsContainer'));
 
 
 
@@ -36,7 +32,8 @@ const Login = lazy(() => import('./components/Login/Login'));
 
 class App extends React.Component {
     componentDidMount() {
-        this.props.initializeApp()
+        this.props.initializeApp();
+        this.props.getFriends(3);
     }
 
     render = () => {
@@ -52,9 +49,11 @@ class App extends React.Component {
                     <Route path='/profile/:userId?' render={() => <ProfileContainer/>}/>
                     <Route path='/dialogs' render={() => <Dialogs/>}/>
                     <Route path='/users' render={() => <UsersContainer/>}/>
-                    <Route path='/news' render={() => <News/>}/>
-                    <Route path='/music' render={() => <Music/>}/>
-                    <Route path='/settings' render={() => <Settings/>}/>
+
+                    <Route path='/friends' render={() => <FriendsContainer/>}/>
+                    {/*<Route path='/music' render={() => <Music/>}/>
+                    <Route path='/settings' render={() => <Settings/>}/>*/}
+
                     <Route path='/login' render={() => <Login/>}/>
                 </Suspense>
             </div>
@@ -68,7 +67,7 @@ const mapStateToProps = state => ({
 
 let AppContainer = compose(
     withRouter,
-    connect(mapStateToProps, {initializeApp})
+    connect(mapStateToProps, {initializeApp, getFriends})
 )(App);
 
 const SamuraiJSApp = props => {

@@ -5,6 +5,7 @@ const SET_USER_PROFILE = 'profile/SET_USER_PROFILE';
 const SET_USER_PROFILE_STATUS = 'profile/SET_USER_PROFILE_STATUS';
 const DELETE_POST = 'profile/DELETE_POST';
 const SET_USER_PHOTO_SUCCESS = 'profile/SET_USER_PHOTO_SUCCESS';
+const IS_FETCHING = 'profile/IS_FETCHING';
 
 let initialState = {
     postsData: [
@@ -15,12 +16,13 @@ let initialState = {
                 'неотделима от доставляемого им удовольствия. Если созерцание произведения искусства побуждает к ' +
                 'какой-либо деятельности, это значит, что либо произведение весьма посредственно, либо созерцающий ' +
                 'не сумел оценить его во всей художественной полноте.',
-            likes: 10
+            likes: 13
         }
     ],
     newPostText: '',
     profile: null,
-    profileStatus: ""
+    profileStatus: "",
+    isFetching: false
 };
 
 const profileReducer = (state = initialState, action) => {
@@ -61,6 +63,13 @@ const profileReducer = (state = initialState, action) => {
             }
         }
 
+        case IS_FETCHING: {
+            return {
+                ...state,
+                isFetching: action.isFetching
+            }
+        }
+
         default:
             return state;
     }
@@ -73,10 +82,13 @@ export const deletePost = (postId) => ({type: DELETE_POST, postId});
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
 export const setUserProfileStatus = (status) => ({type: SET_USER_PROFILE_STATUS, status});
 export const setUserPhotoSuccess = (photos) => ({type: SET_USER_PHOTO_SUCCESS, photos});
+export const isFetchingToggle = (isFetching) => ({type: IS_FETCHING, isFetching});
 
 export const getProfile = userId => async dispatch => {
+    dispatch(isFetchingToggle(true));
     const response = await profileAPI.getProfileInfo(userId);
     dispatch(setUserProfile(response.data));
+    dispatch(isFetchingToggle(false));
 };
 
 export const getStatus = userId => async dispatch => {
@@ -86,7 +98,7 @@ export const getStatus = userId => async dispatch => {
 
 export const updateStatus = status => async dispatch => {
 
-    const response = await profileAPI.updateProfilePhoto(status);
+    const response = await profileAPI.updateProfileStatus(status);
 
     if (response.data.resultCode === 0) {
         dispatch(setUserProfileStatus(status))

@@ -34,13 +34,14 @@
 }
 
 .likes img {
-    width: 20px;
+    width: 40px;
     margin-right: 5px;
 }
 
 .likes p {
     margin-top: 2px;
     font-weight: 400;
+    font-size: 22px;
 }
 
 .avatar {

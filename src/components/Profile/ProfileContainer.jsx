@@ -39,6 +39,7 @@ class ProfileContainer extends React.Component {
                         updateStatus={this.props.updateStatus}
                         isOwner={!this.props.match.params.userId || this.props.match.params.userId === String(this.props.userId)}
                         updatePhoto={this.props.updatePhoto}
+                        isFetching={this.props.isFetching}
         />
     }
 };
@@ -46,7 +47,8 @@ class ProfileContainer extends React.Component {
 const mapStateToProps = (state) => ({
     profile: state.profilePage.profile,
     status: state.profilePage.profileStatus,
-    userId: state.auth.id
+    userId: state.auth.id,
+    isFetching: state.profilePage.isFetching
 });
 
 export default compose(

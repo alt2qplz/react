@@ -31,7 +31,10 @@ const Users = (props) => {
                                     <h3>{u.name}</h3>
                                     <p>{u.status != null ? u.status : ' '}</p>
                                 </div>
-                                {u.followed ?
+
+                                {
+                                  props.isAuth &&
+                                  (u.followed ?
                                     <button disabled={props.followingInProgress.some(id => id === u.id)}
                                             className={s.unsubscribe} onClick={() => {
                                         props.unfollow(u.id)
@@ -42,8 +45,9 @@ const Users = (props) => {
                                             className={s.follow} onClick={() => {
                                         props.follow(u.id)
                                     }
-                                    }>Подписаться</button>
+                                    }>Подписаться</button>)
                                 }
+
                             </div>
                         </div>
                     )

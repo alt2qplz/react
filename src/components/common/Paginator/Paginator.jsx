@@ -40,7 +40,7 @@ const Paginator = props => {
         <button onClick={() => {
             setPortionNumber(portionNumber + 1);
             props.onPageChanged(leftPortionPageNumber + portionSize)
-        }}>NEXT</button>
+        }} className={s.next}>NEXT</button>
         }
     </div>
 };

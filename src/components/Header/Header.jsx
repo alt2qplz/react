@@ -1,26 +1,42 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import s from './Header.module.css';
 import {NavLink} from "react-router-dom";
+import logo from '../../img/react-logo.png';
 
 const Header = (props) => {
 
-    return (
-        <header className={s.header}>
-            <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRAZWYIPyXuDqI99-_2zURPvzu4Hq9kja7D-QxcBSh508lcXSOF"
-                alt=""/>
+  let [isAuth, setIsAuth] = useState(props.isAuth);
 
-            {props.isAuth
-                ? <div className={s.base_info}>
-                    <p>id: <a href="#">{props.id}</a></p>
-                    <p>email: <a href="#">{props.email}</a></p>
-                    <p>login: <a href="#">{props.login}</a></p>
-                    <button onClick={props.logout}>Выход</button>
-                </div>
-                : <NavLink to='/login' className={s.login}>Вход</NavLink>}
+  useEffect(() => {
+    setIsAuth(props.isAuth)
+  }, [props.isAuth]);
 
-        </header>
-    )
+  return (
+    <header className={s.header}>
+      <div className={s.logo}>
+        <img
+          src={logo}
+          alt=""/>
+        <h2>Social-React-Network</h2>
+      </div>
+
+      {isAuth
+        ? <div className={s.base_info}>
+          <p>id: <span>{props.id}</span></p>
+          <p>email: <span>{props.email}</span></p>
+          <p>login: <span>{props.login}</span></p>
+          <NavLink to='/'>
+            <button className={s.logout} onClick={props.logout}>Выход</button>
+          </NavLink>
+        </div>
+        : <NavLink to='/login'>
+          <button className={s.login}>
+            Вход
+          </button>
+        </NavLink>}
+
+    </header>
+  )
 };
 
 export default Header;

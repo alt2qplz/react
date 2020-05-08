@@ -15,13 +15,13 @@ let initialState = {
             senderMe: false
         },
         {
-            id: 2,
+            id: 3,
             message: 'Как дела?',
             avatar: 'https://www.w3schools.com/howto/img_avatar.png',
             senderMe: true
         },
         {
-            id: 2,
+            id: 4,
             message: 'Нормально, у тебя как?',
             avatar: 'https://www.w3schools.com/howto/img_avatar.png',
             senderMe: false
@@ -49,7 +49,7 @@ const dialogReducer = (state = initialState, action) => {
                 messagesData: [
                     ...state.messagesData,
                     {
-                        id: 2,
+                        id: 6,
                         message: action.newMessage,
                         avatar: 'https://www.w3schools.com/howto/img_avatar.png',
                         senderMe: true

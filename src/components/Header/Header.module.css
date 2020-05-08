@@ -14,18 +14,16 @@
     border-radius: 50%;
 }
 
-.header a {
+.header span {
     font-size: 18px;
     color: #6AC0FF;
     font-weight: 400;
 }
 
-a.login {
-    color: #ff4756;
-}
 
 .base_info {
     display: flex;
+    align-items: center;
 }
 
 .base_info p {
@@ -36,3 +34,48 @@ a.login {
 .base_info button {
     padding: 3px 5px;
 }
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin-right: 10px;
+}
+
+.logo h2 {
+    font-size: 26px;
+}
+
+.login, .logout {
+    width: 100px;
+    height: 30px;
+    background: #2FBDFF;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #FFFFFF;
+    transition: 0.3s;
+}
+
+.login:hover, .logout:hover {
+    background: #0090D3;
+}
+
+
+/*
+.newpost button {
+    width: 144px;
+    height: 41px;
+    background: #2FBDFF;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #FFFFFF;
+    transition: 0.3s;
+}
+
+*/

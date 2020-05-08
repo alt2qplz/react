@@ -8,13 +8,13 @@ const ProfileStatusWithHooks = props => {
 
     useEffect( () => {
         setStatus(props.status)
-    }, [props.status])
+    }, [props.status]);
 
     const activateEditMode = () => {
         setEditMode(true)
     };
     const deactivateEditMode = () => {
-        setEditMode(false)
+        setEditMode(false);
         props.updateStatus(status);
     };
 
@@ -29,7 +29,7 @@ const ProfileStatusWithHooks = props => {
     };
 
     return (
-        <div>
+        <div className={s.status}>
             {!editMode &&
             <div>
                 <span onClick={activateEditMode}>{status || 'no status'}</span>

@@ -30,7 +30,11 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    height: 150px;
+}
+
+.main_info .text .name {
+    font-size: 30px;
+    margin-bottom: 10px;
 }
 
 .main_info h2 {
@@ -44,6 +48,7 @@
 }
 
 .description {
+    margin: 5px 0;
 }
 
 .description b {
@@ -57,4 +62,20 @@
     overflow: hidden;
     position: absolute;
     z-index: -1;
+}
+
+.contacts {
+    margin: 10px 0;
+}
+
+.contacts p b {
+    font-weight: 400;
+}
+
+.status {
+    margin-bottom: 5px;
+}
+
+.status span {
+    font-weight: 400;
 }
