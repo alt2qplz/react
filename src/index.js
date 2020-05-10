@@ -6,10 +6,10 @@ import SamuraiJSApp from './App';
 import store from './redux/redux-store';
 
 
-    ReactDOM.render(
-        <SamuraiJSApp />,
-        document.getElementById('root')
-    );
+ReactDOM.render(
+  <SamuraiJSApp/>,
+  document.getElementById('root')
+);
 
 window.store = store;
 

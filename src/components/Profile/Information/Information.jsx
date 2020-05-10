@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./Information.module.css";
-import Preloader from "../../common/Preloader/Preloader";
+import "./social.css";
+
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
 const Avatar = props => {
@@ -12,9 +13,6 @@ const Avatar = props => {
 };
 
 const Information = (props) => {
-  if (!props.profile || props.isFetching) {
-    return <Preloader/>
-  }
 
   const onMainPhotoSelected = (e) => {
     if (e.target.files.length !== 0) {
@@ -23,6 +21,7 @@ const Information = (props) => {
   };
 
   return (
+    <>
     <div className={s.profile}>
       <div className={s.main_info}>
         <div>
@@ -50,16 +49,6 @@ const Information = (props) => {
           }
           <div className={s.description}>
             <p>
-              Обо мне:
-              {props.profile.aboutMe !== null ?
-                <b> {props.profile.aboutMe}</b>
-                :
-                ''
-              }
-            </p>
-          </div>
-          <div className={s.description}>
-            <p>Статус поиска:
               {props.profile.lookingForAJob !== null ?
                 <b> {props.profile.lookingForAJob ? 'Я ищу работу' : 'Я не ищю работу'}</b>
                 :
@@ -68,28 +57,56 @@ const Information = (props) => {
             </p>
           </div>
           <div className={s.description}>
-            <p>Желаемая вакансия:
-              {props.profile.lookingForAJobDescription !== null ?
+            {props.profile.lookingForAJobDescription !== null
+              ? <p>Мои умения:
                 <b> {props.profile.lookingForAJobDescription}</b>
+              </p>
                 :
-                ''
+              <p> </p>
               }
-            </p>
           </div>
-          <div>
-            {Object.keys(props.profile.contacts).map(key => <Contact key={key} contactTitle={key}
-                                                                     contactValue={props.profile.contacts.key}/>)}
+          <div className={s.description}>
+
+              {props.profile.aboutMe !== null
+                ?
+                <p>
+                  Обо мне:
+                <b> {props.profile.aboutMe}</b>
+                </p>
+                :
+                <p> </p>
+              }
+
           </div>
         </div>
       </div>
     </div>
+      <div className={`white-container socialWrap`}>
+        {Object.keys(props.profile.contacts).map(key => <Contact key={key} contactTitle={key}
+                                                                 contactValue={props.profile.contacts[key]}/>)}
+
+      </div>
+
+    </>
   )
 };
 
 const Contact = ({contactTitle, contactValue}) => {
-  return <div className={s.contacts}>
-    <p>{contactTitle}: <b>{contactValue ? contactValue : 'no'}</b></p>
+  return <div className={`socialIcon ${contactTitle}`}>
+    {contactValue
+      ? <a href={`/${contactValue}`} target='_blank'>
+        <div className={`active`}></div>
+        </a>
+      : <div className={`disable`}></div>}
+
+
   </div>
-}
+};
+
+/*const Contact = ({contactTitle, contactValue}) => {
+  return <div className={s.contacts}>
+    <p>{contactTitle}: <b>{contactValue ? <a href={`https://${contactValue}`} target='_blank'>{contactValue}</a> : ' '}</b></p>
+  </div>
+};*/
 
 export default Information;

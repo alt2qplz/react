@@ -21,6 +21,10 @@
     transition: 0.3s;
 }
 
+.loginButton:hover {
+    background: #0090D3;
+}
+
 .checkBox {
     margin-bottom: 10px;
     margin-right: 10px;

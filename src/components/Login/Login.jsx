@@ -41,7 +41,6 @@ const Login = (props) => {
     props.login(formData.email, formData.password, formData.rememberMe)
   };
 
-
   if (props.isAuth) {
     return <Redirect to={'/profile'}/>
   }

@@ -1,0 +1,146 @@
+.socialIcon {
+    width: 50px;
+    height: 50px;
+}
+
+.socialIcon .disable {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center center;
+}
+
+.socialIcon .active {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center center;
+    transition: 0.3s;
+}
+
+.socialWrap {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.facebook {}
+
+.facebook .disable {
+    background-image: url("./../../../img/social_icons/disable/Facebook.png");
+}
+
+.facebook .active {
+    background-image: url("./../../../img/social_icons/active/Facebook.png");
+}
+
+.facebook .active:hover {
+    background-image: url("./../../../img/social_icons/hover/Facebook.png");
+}
+
+.website {
+
+}
+
+.website .disable {
+    background-image: url("./../../../img/social_icons/disable/Star.png");
+}
+
+.website .active {
+    background-image: url("./../../../img/social_icons/active/Star.png");
+}
+
+.website .active:hover {
+    background-image: url("./../../../img/social_icons/hover/Star.png");
+}
+
+.vk {}
+
+.vk .disable {
+    background-image: url("./../../../img/social_icons/disable/VK.png");
+}
+
+.vk .active {
+    background-image: url("./../../../img/social_icons/active/VK.png");
+}
+
+.vk .active:hover {
+    background-image: url("./../../../img/social_icons/hover/VK.png");
+}
+
+.twitter {
+
+}
+
+.twitter .disable {
+    background-image: url("./../../../img/social_icons/disable/Twitter.png");
+}
+
+.twitter .active {
+    background-image: url("./../../../img/social_icons/active/Twitter.png");
+}
+
+.twitter .active:hover {
+    background-image: url("./../../../img/social_icons/hover/Twitter.png");
+}
+
+.instagram {}
+
+.instagram .disable {
+    background-image: url("./../../../img/social_icons/disable/Instagram.png");
+}
+
+.instagram .active {
+    background-image: url("./../../../img/social_icons/active/Instagram.png");
+}
+
+.instagram .active:hover {
+    background-image: url("./../../../img/social_icons/hover/Instagram.png");
+}
+
+.youtube {}
+
+.youtube .disable {
+    background-image: url("./../../../img/social_icons/disable/Youtube.png");
+}
+
+.youtube .active {
+    background-image: url("./../../../img/social_icons/active/Youtube.png");
+}
+
+.youtube .active:hover {
+    background-image: url("./../../../img/social_icons/hover/Youtube.png");
+}
+
+
+.github {
+
+}
+
+.github .disable {
+    background-image: url("./../../../img/social_icons/disable/Github.png");
+}
+
+.github .active {
+    background-image: url("./../../../img/social_icons/active/Github.png");
+}
+
+.github .active:hover {
+    background-image: url("./../../../img/social_icons/hover/Github.png");
+}
+
+.mainLink {
+
+}
+
+.mainLink .disable {
+    background-image: url("./../../../img/social_icons/disable/World.png");
+}
+
+.mainLink .active {
+    background-image: url("./../../../img/social_icons/active/World.png");
+}
+
+.mainLink .active:hover {
+    background-image: url("./../../../img/social_icons/hover/World.png");
+}

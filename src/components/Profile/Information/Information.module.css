@@ -48,7 +48,11 @@
 }
 
 .description {
-    margin: 5px 0;
+    margin: 0 0 10px 0;
+}
+
+.description:nth-last-child(1) {
+    margin: 0;
 }
 
 .description b {
@@ -64,18 +68,13 @@
     z-index: -1;
 }
 
-.contacts {
-    margin: 10px 0;
-}
-
-.contacts p b {
-    font-weight: 400;
-}
 
 .status {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .status span {
     font-weight: 400;
 }
+
+
