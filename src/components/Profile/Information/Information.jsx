@@ -94,7 +94,7 @@ const Information = (props) => {
 const Contact = ({contactTitle, contactValue}) => {
   return <div className={`socialIcon ${contactTitle}`}>
     {contactValue
-      ? <a href={`/${contactValue}`} target='_blank'>
+      ? <a href={`https://${contactValue}`} target='_blank'>
         <div className={`active`}></div>
         </a>
       : <div className={`disable`}></div>}
@@ -102,11 +102,5 @@ const Contact = ({contactTitle, contactValue}) => {
 
   </div>
 };
-
-/*const Contact = ({contactTitle, contactValue}) => {
-  return <div className={s.contacts}>
-    <p>{contactTitle}: <b>{contactValue ? <a href={`https://${contactValue}`} target='_blank'>{contactValue}</a> : ' '}</b></p>
-  </div>
-};*/
 
 export default Information;
