@@ -4,8 +4,10 @@
     <list default="true" id="66e93105-e08d-4fa5-8191-f644ba4a3cb9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EditProfile/EditProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditProfile/EditProfile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Information/Information.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Information/Information.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditProfile/EditProfile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditProfile/EditProfile.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/auth-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth-reducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -220,7 +222,7 @@
       <workItem from="1588942907606" duration="22194000" />
       <workItem from="1589031165028" duration="7305000" />
       <workItem from="1589120616072" duration="18667000" />
-      <workItem from="1589203081339" duration="3171000" />
+      <workItem from="1589203081339" duration="6119000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 85 - hooks, useState, useEffect">
       <created>1588111720907</created>

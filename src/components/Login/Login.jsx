@@ -19,9 +19,20 @@ let LoginForm = (props) => {
         <Field type={'password'} name={'password'} component={InputStandard} placeholder={'Пароль'}
                validate={[required]}/>
       </div>
-      <div>
-        <Field type={'checkbox'} name={'rememberMe'} component={'input'} className={s.checkBox}/>
+      <div className={s.appleSwitchWrap}>
+        <Field type={'checkbox'} name={'rememberMe'} component={'input'} className={s.appleSwitch}/>
         Запомнить меня
+      </div>
+      <div>
+        {
+          props.captchaUrl && <img src={props.captchaUrl} />
+        }
+        {
+          props.captchaUrl &&
+            <Field type={'text'} name={'captcha'} component={InputStandard} placeholder={'Введите символы'}
+                   validate={[required]}/>
+
+        }
       </div>
       {props.error && <div className={s.errorWrap}>
         <p>{props.error}</p>
@@ -38,7 +49,7 @@ LoginForm = reduxForm({
 
 const Login = (props) => {
   let submit = formData => {
-    props.login(formData.email, formData.password, formData.rememberMe)
+    props.login(formData.email, formData.password, formData.rememberMe, formData.captcha)
   };
 
   if (props.isAuth) {
@@ -47,13 +58,14 @@ const Login = (props) => {
 
   return (
     <div className={`${s.loginFormWrap} white-container`}>
-      <LoginForm onSubmit={submit}/>
+      <LoginForm onSubmit={submit} captchaUrl={props.captchaUrl}/>
     </div>
   )
 };
 
 const mapStateToProps = (state) => ({
-  isAuth: state.auth.isAuth
+  isAuth: state.auth.isAuth,
+  captchaUrl: state.auth.captchaUrl
 });
 
 export default connect(mapStateToProps, {login})(Login);
