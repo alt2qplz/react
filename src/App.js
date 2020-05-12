@@ -1,5 +1,5 @@
 import React, {Suspense, lazy} from 'react';
-import {BrowserRouter, Route, withRouter} from "react-router-dom";
+import {BrowserRouter, Redirect, Route, Switch, withRouter} from "react-router-dom";
 import './App.css';
 import {compose} from "redux";
 import {connect, Provider} from "react-redux";
@@ -53,6 +53,7 @@ class App extends React.Component {
       <NavbarContainer/>
       <div className="app-wrapper-content">
         <Suspense fallback={<Preloader/>}>
+          <Switch>
           <Route path='/profile/:userId?' render={() => <ProfileContainer/>}/>
           <Route path='/editprofile' render={() => <EditProfileContainer />}/>
           <Route path='/dialogs' render={() => <Dialogs/>}/>
@@ -60,6 +61,10 @@ class App extends React.Component {
           <Route path='/friends' render={() => <FriendsContainer/>}/>
           <Route path='/games' render={() => <Games />}/>
           <Route path='/login' render={() => <Login/>}/>
+            <Redirect exact path='/' to="/profile"/>
+            <Redirect exact path='/profile' to="/profile/:userId?"/>
+            <Route path='*' render={() => <div>404</div>}/>
+          </Switch>
         </Suspense>
       </div>
     </div>
