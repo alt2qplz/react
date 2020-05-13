@@ -16,6 +16,10 @@ export const usersAPI = {
         return instance.get(`users?page=${currentPage}&count=${pageSize}`)
     },
 
+    checkFollow(userId) {
+      return instance.get(`follow/${userId}`)
+    },
+
     follow(userId) {
         return instance.post(`follow/${userId}`)
     },

@@ -1,0 +1,26 @@
+.pnf h2 {
+    font-size: 70px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 0;
+    color: #ff4756;
+}
+
+.pnf h3 {
+    font-size: 48px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pnf p {
+    font-size: 24px;
+    text-decoration: underline;
+    color: #2FBDFF;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.pnf p:hover {
+    color: #0090D3;
+}

@@ -1,4 +1,4 @@
-import {profileAPI} from "../api/api";
+import {profileAPI, usersAPI} from "../api/api";
 import {stopSubmit} from "redux-form";
 
 const ADD_POST = 'profile/ADD-POST';
@@ -7,6 +7,7 @@ const SET_USER_PROFILE_STATUS = 'profile/SET_USER_PROFILE_STATUS';
 const DELETE_POST = 'profile/DELETE_POST';
 const SET_USER_PHOTO_SUCCESS = 'profile/SET_USER_PHOTO_SUCCESS';
 const IS_FETCHING = 'profile/IS_FETCHING';
+const SET_USER_FOLLOW_STATUS = 'profile/SET_USER_FOLLOW_STATUS';
 
 let initialState = {
   postsData: [
@@ -23,7 +24,8 @@ let initialState = {
   newPostText: '',
   profile: null,
   profileStatus: "",
-  isFetching: false
+  isFetching: false,
+  userFollowStatus: null
 };
 
 const profileReducer = (state = initialState, action) => {
@@ -50,10 +52,16 @@ const profileReducer = (state = initialState, action) => {
     }
 
     case SET_USER_PROFILE_STATUS: {
-
       return {
         ...state,
         profileStatus: action.status
+      }
+    }
+
+    case SET_USER_FOLLOW_STATUS: {
+      return {
+        ...state,
+        userFollowStatus: action.status
       }
     }
 
@@ -82,6 +90,7 @@ export const addPost = (newPostText) => ({type: ADD_POST, newPostText});
 export const deletePost = (postId) => ({type: DELETE_POST, postId});
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
 export const setUserProfileStatus = (status) => ({type: SET_USER_PROFILE_STATUS, status});
+export const setUserFollowStatus = (status) => ({type: SET_USER_FOLLOW_STATUS, status});
 export const setUserPhotoSuccess = (photos) => ({type: SET_USER_PHOTO_SUCCESS, photos});
 export const isFetchingToggle = (isFetching) => ({type: IS_FETCHING, isFetching});
 
@@ -89,12 +98,18 @@ export const getProfile = userId => async dispatch => {
   dispatch(isFetchingToggle(true));
   const response = await profileAPI.getProfileInfo(userId);
   dispatch(setUserProfile(response.data));
+  //dispatch(checkFollow(response.data.userId));
   dispatch(isFetchingToggle(false));
 };
 
 export const getStatus = userId => async dispatch => {
   const response = await profileAPI.getProfileStatus(userId);
   dispatch(setUserProfileStatus(response.data))
+};
+
+export const checkFollow = (userId) => async dispatch => {
+  const response = await usersAPI.checkFollow(userId);
+  dispatch(setUserFollowStatus(response.data))
 };
 
 export const updateStatus = status => async dispatch => {

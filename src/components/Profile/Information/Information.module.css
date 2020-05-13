@@ -77,4 +77,35 @@
     font-weight: 400;
 }
 
+.leftSide {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-between;
+}
 
+.follow, .unfollow  {
+    margin-top: 10px;
+    width: 150px;
+    height: 30px;
+    font-size: 14px;
+    background: #6AC0FF;
+    border-radius: 5px;
+    color: #FFFFFF;
+    transition: 0.3s;
+    font-weight: normal;
+    border: 1px solid #6AC0FF;
+    cursor: pointer;
+}
+
+button.follow:hover {
+    background: #669fdc;
+    border: 1px solid #669fdc;
+    cursor: pointer;
+}
+
+button.unfollow {
+    background: #fff;
+    color: #6AC0FF;
+    border: 1px solid #6AC0FF;
+}

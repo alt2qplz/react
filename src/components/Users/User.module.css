@@ -61,7 +61,7 @@
     cursor: pointer;
 }
 
-.user_info button.unsubscribe {
+.user_info button.unfollow {
     background: #fff;
     color: #6AC0FF;
     border: 1px solid #6AC0FF;

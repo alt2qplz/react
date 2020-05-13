@@ -36,7 +36,7 @@ const Users = (props) => {
                                   props.isAuth &&
                                   (u.followed ?
                                     <button disabled={props.followingInProgress.some(id => id === u.id)}
-                                            className={s.unsubscribe} onClick={() => {
+                                            className={s.unfollow} onClick={() => {
                                         props.unfollow(u.id)
                                     }
                                     }>Отписаться</button>

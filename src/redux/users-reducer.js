@@ -142,29 +142,23 @@ export const getFriends = (maxFriends) => async dispatch => {
   dispatch(setTotalUsersCount(friends));
 };
 
-export const follow = (userId) => {
-  return (dispatch) => {
-    dispatch(isFollowingProgress(true, userId));
-    usersAPI.follow(userId)
-      .then(response => {
-        if (response.data.resultCode === 0) {
-          dispatch(followSuccess(userId))
-        }
-        dispatch(isFollowingProgress(false, userId))
-      });
+export const follow = userId => async dispatch => {
+  dispatch(isFollowingProgress(true, userId));
+  const response = await usersAPI.follow(userId);
+  if (response.data.resultCode === 0) {
+    dispatch(followSuccess(userId))
   }
+  dispatch(isFollowingProgress(false, userId))
 };
-export const unfollow = (userId) => {
-  return (dispatch) => {
-    dispatch(isFollowingProgress(true, userId));
-    usersAPI.unfollow(userId)
-      .then(response => {
-        if (response.data.resultCode === 0) {
-          dispatch(unfollowSuccess(userId))
-        }
-        dispatch(isFollowingProgress(false, userId))
-      });
+
+
+export const unfollow = userId => async dispatch => {
+  dispatch(isFollowingProgress(true, userId));
+  const response = await usersAPI.unfollow(userId);
+  if (response.data.resultCode === 0) {
+    dispatch(unfollowSuccess(userId))
   }
+  dispatch(isFollowingProgress(false, userId))
 };
 
 export default usersReducer;

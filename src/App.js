@@ -12,6 +12,7 @@ import {getFriends} from "./redux/users-reducer";
 import EditProfileContainer from "./components/EditProfile/EditProfile";
 
 
+
 //import ProfileContainer from "./components/Profile/ProfileContainer";
 const ProfileContainer = lazy(() => import('./components/Profile/ProfileContainer'));
 
@@ -29,6 +30,9 @@ const FriendsContainer = lazy(() => import('./components/Friends/FriendsContaine
 
 //import Games from "./components/Games/Games";
 const Games = lazy(() => import('./components/Games/Games'));
+
+//import PageNotFound from "./components/PageNotFound/PageNotFound";
+const PageNotFound = lazy(() => import('./components/PageNotFound/PageNotFound'));
 
 
 class App extends React.Component {
@@ -63,7 +67,7 @@ class App extends React.Component {
           <Route path='/login' render={() => <Login/>}/>
             <Redirect exact path='/' to="/profile"/>
             <Redirect exact path='/profile' to="/profile/:userId?"/>
-            <Route path='*' render={() => <div>404</div>}/>
+            <Route path='*' render={() => <PageNotFound />}/>
           </Switch>
         </Suspense>
       </div>
