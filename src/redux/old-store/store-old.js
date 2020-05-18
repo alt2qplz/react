@@ -1,6 +1,9 @@
-import profileReducer from "./profile-reducer";
-import dialogReducer from "./dialogs-reducer";
+import profileReducer from "../reducers/profile-reducer";
+import dialogReducer from "../reducers/dialogs-reducer";
 
+/*
+* Этот стор имитирует работу редакса, и был создал в процессе обучения как обучающий макет
+* */
 
 let storeOld = {
     _state: {

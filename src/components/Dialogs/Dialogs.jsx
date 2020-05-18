@@ -1,23 +1,28 @@
 import React from "react";
 import s from './Dialogs.module.css';
-import MessagesContainer from "./Messages/MessagesContainer";
-import DialogueContainer from "./Dialogue/DialogueContainer";
 import {connect} from "react-redux";
 import withAuthRedirect from "../../hoc/withAuthRedirect";
 import {compose} from "redux";
+import Messages from "./Messages/Messages";
+import ChatRoom from "./ChatRoom/ChatRoom";
+import Preloader from "../common/Preloader/Preloader";
 
 const Dialogs = (props) => {
 
     return (
         <div className={`${s.dialogs}`}>
-            <DialogueContainer />
-            <MessagesContainer />
+            <ChatRoom />
+            {props.isFetching
+            ? <Preloader />
+            : <Messages />}
         </div>
     )
 };
 
 let mapStateToProps = (state) => {
-    return {}
+    return {
+        isFetching: state.dialogsPage.isFetching
+    }
 };
 
 export default compose(

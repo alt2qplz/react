@@ -3,12 +3,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import SamuraiJSApp from './App';
-import store from './redux/redux-store';
+import store from './redux/store/redux-store';
 
 
 ReactDOM.render(
-  <SamuraiJSApp/>,
-  document.getElementById('root')
+    <SamuraiJSApp/>,
+    document.getElementById('root')
 );
 
 window.store = store;

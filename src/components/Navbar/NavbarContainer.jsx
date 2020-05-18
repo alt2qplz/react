@@ -7,4 +7,4 @@ const mapStateToProps = (state) => ({
     isAuth: state.auth.isAuth
 });
 
-export default connect(mapStateToProps,{})(Navbar);
+export default connect(mapStateToProps, {})(Navbar);

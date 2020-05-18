@@ -1,12 +1,24 @@
 import React from "react";
-import { create } from "react-test-renderer";
+import {create} from "react-test-renderer";
 import ProfileStatus from "./ProfileStatus";
 
 describe('ProfileStatus component', () => {
+
+    /*
+
+    testInstance.instance
+
+    Экземпляр компонента, соответствующий его тестовому экземпляру. Свойство доступно только для классовых компонентов,
+    т. к. функциональные компоненты не имеют экземпляров. Этот экземпляр компонента будет соответствовать значению this
+    внутри данного компонента.
+
+    */
+
+    //Тест не работает, так как нельзя взять инстанс не у классовой компоненты
     test('status from props should be in the state', () => {
         const component = create(<ProfileStatus status='myStatus'/>);
         const instance = component.getInstance();
-        expect(instance.state.status).toBe('myStatus')
+        expect(instance.status).toBe('myStatus')
     });
 
     test(`after creation span should be displayed`, () => {
@@ -40,11 +52,12 @@ describe('ProfileStatus component', () => {
         expect(input).not.toBeNull();
     });
 
+    //Тест не работает, так как нельзя взять инстанс не у классовой компоненты
     test(`callback should be called`, () => {
         const mockCallback = jest.fn();
         const component = create(<ProfileStatus status='myStatus' updateStatus={mockCallback}/>);
         const instance = component.getInstance();
-        instance.deactivateEditMode();
+        instance.setEditMode(false);
         expect(mockCallback.mock.calls.length).toBe(1);
     });
 });

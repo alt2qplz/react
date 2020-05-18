@@ -17,7 +17,7 @@ export const usersAPI = {
     },
 
     checkFollow(userId) {
-      return instance.get(`follow/${userId}`)
+        return instance.get(`follow/${userId}`)
     },
 
     follow(userId) {
@@ -37,7 +37,7 @@ export const profileAPI = {
     },
 
     getProfileStatus(userId) {
-        return(
+        return (
             instance.get(`profile/status/${userId}`)
         )
     },
@@ -80,4 +80,27 @@ export const securityAPI = {
     getCaptcha() {
         return instance.get('security/get-captcha-url')
     }
-}
+};
+
+export const dialogsAPI = {
+
+    //get all dialogs
+    getAllDialogs() {
+        return instance.get('dialogs')
+    },
+
+    //start chatting, refresh your companion so that he was on top
+    startChatting(userId) {
+        return instance.put(`dialogs/${userId}`)
+    },
+
+    //get list of messages with your friend
+    getMessages(userId) {
+        return instance.get(`dialogs/${userId}/messages`)
+    },
+
+    //send message to your friend
+    sendMessageToUser(userId, message) {
+        return instance.post(`dialogs/${userId}/messages`, {body: message})
+    }
+};
