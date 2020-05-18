@@ -9,36 +9,21 @@ import store from "./redux/redux-store";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import NavbarContainer from "./components/Navbar/NavbarContainer";
 import {getFriends} from "./redux/users-reducer";
-import EditProfileContainer from "./components/EditProfile/EditProfile";
 
-
-
-//import ProfileContainer from "./components/Profile/ProfileContainer";
 const ProfileContainer = lazy(() => import('./components/Profile/ProfileContainer'));
-
-//import Dialogs from "./components/Dialogs/Dialogs";
 const Dialogs = lazy(() => import('./components/Dialogs/Dialogs'));
-
-//import UsersContainer from "./components/Friends/UsersContainer";
 const UsersContainer = lazy(() => import('./components/Users/UsersContainer'));
-
-//import Login from "./components/Login/Login";
 const Login = lazy(() => import('./components/Login/Login'));
-
-//import FriendsContainer from "./components/Friends/FriendsContainer";
 const FriendsContainer = lazy(() => import('./components/Friends/FriendsContainer'));
-
-//import Games from "./components/Games/Games";
 const Games = lazy(() => import('./components/Games/Games'));
-
-//import PageNotFound from "./components/PageNotFound/PageNotFound";
 const PageNotFound = lazy(() => import('./components/PageNotFound/PageNotFound'));
+const EditProfileContainer = lazy(() => import('./components/EditProfile/EditProfile'));
+const CowsBulls = lazy(() => import('./components/BullsAndCows/BullsAndCows'));
 
 
 class App extends React.Component {
   componentDidMount() {
     this.props.initializeApp();
-    //this.props.isAuth && this.props.getFriends(3);
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
@@ -58,16 +43,17 @@ class App extends React.Component {
       <div className="app-wrapper-content">
         <Suspense fallback={<Preloader/>}>
           <Switch>
-          <Route path='/profile/:userId?' render={() => <ProfileContainer/>}/>
-          <Route path='/editprofile' render={() => <EditProfileContainer />}/>
-          <Route path='/dialogs' render={() => <Dialogs/>}/>
-          <Route path='/users' render={() => <UsersContainer/>}/>
-          <Route path='/friends' render={() => <FriendsContainer/>}/>
-          <Route path='/games' render={() => <Games />}/>
-          <Route path='/login' render={() => <Login/>}/>
+            <Route path='/profile/:userId?' render={() => <ProfileContainer/>}/>
+            <Route path='/editprofile' render={() => <EditProfileContainer/>}/>
+            <Route path='/dialogs' render={() => <Dialogs/>}/>
+            <Route path='/users' render={() => <UsersContainer/>}/>
+            <Route path='/friends' render={() => <FriendsContainer/>}/>
+            <Route path='/games' render={() => <Games/>}/>
+            <Route path='/bullscows' render={() => <CowsBulls/>}/>
+            <Route path='/login' render={() => <Login/>}/>
             <Redirect exact path='/' to="/profile"/>
             <Redirect exact path='/profile' to="/profile/:userId?"/>
-            <Route path='*' render={() => <PageNotFound />}/>
+            <Route path='*' render={() => <PageNotFound/>}/>
           </Switch>
         </Suspense>
       </div>

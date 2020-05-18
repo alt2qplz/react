@@ -2,6 +2,7 @@ import React from "react";
 import MyFriends from "./MyFriends/MyFriends";
 import s from './Navbar.module.css';
 import {NavLink} from "react-router-dom";
+import cn from 'classnames';
 
 const Navbar = (props) => {
   /*
@@ -12,7 +13,7 @@ const Navbar = (props) => {
 
   return (
     <div className={s.sideBar}>
-      <nav className={s.nav}>
+      <nav className={cn('white-container', s.nav)}>
         <NavLink to={'/profile/' + (props.myId !== null ? props.myId : 2)} activeClassName={s.activeLink}
                  className={s.item}>
           Мой профиль
@@ -29,8 +30,8 @@ const Navbar = (props) => {
         <NavLink to="/users" className={s.item} activeClassName={s.activeLink}>
           Все пользователи
         </NavLink>
-        <NavLink to="/games" className={s.item} activeClassName={s.activeLink}>
-          Игры
+        <NavLink to="/bullscows" className={s.item} activeClassName={s.activeLink}>
+          Игра Быки и Коровы
         </NavLink>
       </nav>
       {props.isAuth && <MyFriends/>}

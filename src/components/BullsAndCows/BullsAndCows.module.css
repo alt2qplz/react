@@ -1,0 +1,110 @@
+.victory h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.victory h3 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.victory h2 span, .victory h3 span {
+    font-weight: 400;
+}
+
+.gameRules {
+    width: 550px;
+    margin: 0 auto;
+}
+
+.gameRules h3 {
+    font-size: 24px;
+}
+
+.gameRules p span {
+font-weight: 400;
+}
+
+.mainButton {
+    width: 144px;
+    height: 41px;
+    background: #2FBDFF;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #FFFFFF;
+    transition: 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+.mainButton:hover {
+    background: #0090D3;
+}
+
+.game {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.currentResult {
+    display: flex;
+    width: 210px;
+    justify-content: space-between;
+}
+
+.currentResult div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.currentResult div img{
+    width: 93px;
+    margin-bottom: 5px;
+}
+
+.bull {
+    margin-top: 9px;
+}
+
+.currentResult div p {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.numberForm input {
+    width: 180px;
+    height: 40px;
+    margin: 20px 0;
+    border-radius: 4px;
+    border: 2px solid #2FBDFF;
+    text-align: center;
+    font-size: 24px;
+}
+
+.attempts {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.attempt {
+    margin-top: 10px;
+}
+
+.attempt:nth-last-child(1) p {
+    font-size: 24px;
+}
+
+.attempt p {
+    font-size: 18px;
+}
+
+.attempt p span {
+    font-weight: 400;
+}

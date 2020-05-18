@@ -3,14 +3,7 @@
     height: 50px;
 }
 
-.socialIcon .disable {
-    width: 100%;
-    height: 100%;
-    background-size: contain;
-    background-position: center center;
-}
-
-.socialIcon .active {
+.socialIcon div {
     width: 100%;
     height: 100%;
     background-size: contain;
@@ -38,9 +31,7 @@
     background-image: url("./../../../img/social_icons/hover/Facebook.png");
 }
 
-.website {
-
-}
+.website {}
 
 .website .disable {
     background-image: url("./../../../img/social_icons/disable/Star.png");
@@ -68,9 +59,7 @@
     background-image: url("./../../../img/social_icons/hover/VK.png");
 }
 
-.twitter {
-
-}
+.twitter {}
 
 .twitter .disable {
     background-image: url("./../../../img/social_icons/disable/Twitter.png");
@@ -112,10 +101,7 @@
     background-image: url("./../../../img/social_icons/hover/Youtube.png");
 }
 
-
-.github {
-
-}
+.github {}
 
 .github .disable {
     background-image: url("./../../../img/social_icons/disable/Github.png");
@@ -129,9 +115,7 @@
     background-image: url("./../../../img/social_icons/hover/Github.png");
 }
 
-.mainLink {
-
-}
+.mainLink {}
 
 .mainLink .disable {
     background-image: url("./../../../img/social_icons/disable/World.png");
