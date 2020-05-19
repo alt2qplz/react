@@ -7,18 +7,18 @@
     display: flex;
     flex-direction: column;
     margin-right: 20px;
-    padding: 10px 20px;
+    padding: 10px;
     width: 200px;
 }
 
 .dialogItem {
     display: flex;
     align-items: center;
-    margin: 10px 0px;
+    padding: 10px;
 }
 
 .dialogItem img {
-    width: 60px;
+    width: 50px;
     margin-right: 15px;
     border-radius: 5px;
 }
@@ -28,12 +28,27 @@
     align-items: center;
 }
 
+.dialogItem p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #888D85;
+}
+
+a.activeLink {
+    background: #F5FBFF;
+    border-radius: 4px;
+    color: #6AC0FF;
+}
+
+a.activeLink p {
+    color: #6AC0FF;
+}
 
 .messagesBody {
     width: 470px;
     display: flex;
     flex-direction: column;
-    padding: 10px 20px;
+    padding: 10px 20px 20px 20px;
 }
 
 .newMessageForm {
@@ -43,18 +58,50 @@
 .messageItem {
     display: flex;
     align-items: center;
-    margin: 10px 0;
+    margin: 8px 0;
+    width: auto;
+    position: relative;
 }
 
 .messageItem img {
-    width: 40px;
+    width: 30px;
     margin-right: 10px;
     border-radius: 50%;
 }
 
 .messageItem p {
-    font-size: 20px;
-    color: darkblue;
+    font-size: 16px;
+    background-color: #f5f5f5;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.friendMessageItem::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -10px;
+    border: 7px solid transparent;
+    border-top: 7px solid #f5f5f5;
+    border-left: 7px solid #f5f5f5;
+}
+
+.myMessageItem {
+    flex-direction: row-reverse;
+}
+
+.myMessageItem::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: -10px;
+    border: 7px solid transparent;
+    border-top: 7px solid #e6f4ff;
+    border-right: 7px solid #e6f4ff;
+}
+
+.myMessageItem p {
+    background-color: #e6f4ff;
 }
 
 .messageText {
@@ -81,8 +128,3 @@
 }
 
 
-a.activeLink {
-    background: #F5FBFF;
-    border-radius: 4px;
-    color: #6AC0FF;
-}

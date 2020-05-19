@@ -29,7 +29,7 @@ class App extends React.Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.isAuth !== this.props.isAuth && this.props.isAuth === true) {
-            //this.props.getFriends(3)
+            this.props.getFriends(3)
         }
     }
 

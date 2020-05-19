@@ -1,6 +1,5 @@
 import {dialogsAPI} from "../../api/api";
 
-const SEND_MESSAGE_SUCCESS = 'dialogs/SEND_MESSAGE_SUCCESS';
 const SET_DIALOGS = 'dialogs/SET_DIALOGS';
 const SET_MESSAGES = 'dialogs/SET_MESSAGES';
 const SET_FETCHING = 'dialogs/SET_FETCHING';
@@ -52,7 +51,6 @@ const dialogReducer = (state = initialState, action) => {
     }
 };
 
-export const sendMessageSuccess = (newMessage) => ({type: SEND_MESSAGE_SUCCESS, newMessage});
 export const setAllDialogs = (dialogs) => ({type: SET_DIALOGS, dialogs});
 export const setMessages = (messages) => ({type: SET_MESSAGES, messages});
 export const setIsFetching = (isFetching) => ({type: SET_FETCHING, isFetching});

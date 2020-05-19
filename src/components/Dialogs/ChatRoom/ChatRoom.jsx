@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import s from './../Dialogs.module.css';
 import {NavLink} from "react-router-dom";
 import {connect} from "react-redux";
-import {getAllDialogs, getMessages} from "../../../redux/reducers/dialogs-reducer";
+import {getMessages} from "../../../redux/reducers/dialogs-reducer";
 
 const ChatItem = (props) => {
 
@@ -31,17 +31,12 @@ const ChatRoom = (props) => {
         setDialogsData(props.dialogsData)
     }, [props.dialogsData]);
 
-    let getD = () => {
-        props.getAllDialogs()
-    };
-
     let dialogs = dialogsData.map(d => <ChatItem key={d.id} name={d.userName} id={d.id} avatar={d.photos.small}
                                                          getMessages={props.getMessages}/>);
 
     return (
         <div className={`${s.names} white-container`}>
             {dialogs}
-            <button onClick={getD}>cl</button>
         </div>
 
     )
@@ -53,4 +48,4 @@ const mapStateToProps = (state) => {
     }
 };
 
-export default connect(mapStateToProps, {getMessages, getAllDialogs})(ChatRoom);
+export default connect(mapStateToProps, {getMessages})(ChatRoom);
