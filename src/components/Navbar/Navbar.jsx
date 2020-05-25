@@ -31,7 +31,7 @@ const Navbar = (props) => {
                     Все пользователи
                 </NavLink>
                 <NavLink to="/bullscows" className={s.item} activeClassName={s.activeLink}>
-                    Игра Быки и Коровы
+                    Игра "Быки-Коровы"
                 </NavLink>
             </nav>
             {props.isAuth && <MyFriends/>}
