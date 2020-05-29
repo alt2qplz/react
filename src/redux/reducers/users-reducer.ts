@@ -1,4 +1,5 @@
 import {usersAPI} from "../../api/api";
+import {UserType} from "../../types/types";
 
 const FOLLOW = 'users/FOLLOW';
 const UNFOLLOW = 'users/UNFOLLOW';
@@ -10,17 +11,18 @@ const IS_FETCHING_TOGGLE = 'users/IS_FETCHING_TOGGLE';
 const IS_FOLLOWING_PROGRESS = 'users/IS_FOLLOWING_PROGRESS';
 
 let initialState = {
-    users: [],
-    friends: [],
+    users: [] as Array<UserType>,
+    friends: [] as Array<UserType>,
     pageSize: 50,
     totalUsersCount: 0,
     currentPage: 1,
     isFetching: false,
-    followingInProgress: []
-
+    followingInProgress: [] as Array<number> // array of users id
 };
 
-const usersReducer = (state = initialState, action) => {
+type InitialStateType = typeof initialState
+
+const usersReducer = (state = initialState, action: any): InitialStateType => {
     switch (action.type) {
 
         case FOLLOW: {
@@ -111,16 +113,56 @@ const usersReducer = (state = initialState, action) => {
 
 };
 
-export const followSuccess = (userId) => ({type: FOLLOW, userId});
-export const unfollowSuccess = (userId) => ({type: UNFOLLOW, userId});
-export const setUsers = (users) => ({type: SET_USERS, users});
-export const setFriends = (friends) => ({type: SET_FRIENDS, friends});
-export const setCurrentPage = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
-export const setTotalUsersCount = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, totalUsersCount});
-export const isFetchingToggle = (isFetching) => ({type: IS_FETCHING_TOGGLE, isFetching});
-export const isFollowingProgress = (isFetching, userId) => ({type: IS_FOLLOWING_PROGRESS, isFetching, userId});
+type FollowSuccessActionType = {
+    type: typeof FOLLOW
+    userId: number
+}
+export const followSuccess = (userId: number): FollowSuccessActionType => ({type: FOLLOW, userId});
 
-export const getUsers = (currentPage, pageSize) => async dispatch => {
+type UnfollowSuccessActionType = {
+    type: typeof UNFOLLOW
+    userId: number
+}
+export const unfollowSuccess = (userId: number): UnfollowSuccessActionType => ({type: UNFOLLOW, userId});
+
+type SetUsersActionType = {
+    type: typeof SET_USERS
+    users: Array<UserType>
+}
+export const setUsers = (users: Array<UserType>): SetUsersActionType => ({type: SET_USERS, users});
+
+type SetFriendsActionType = {
+    type: typeof SET_FRIENDS
+    friends: Array<UserType>
+}
+export const setFriends = (friends: Array<UserType>): SetFriendsActionType => ({type: SET_FRIENDS, friends});
+
+type SetCurrentPageActionType = {
+    type: typeof SET_CURRENT_PAGE
+    currentPage: number
+}
+export const setCurrentPage = (currentPage: number): SetCurrentPageActionType => ({type: SET_CURRENT_PAGE, currentPage});
+
+type SetTotalUsersCountActionType = {
+    type: typeof SET_TOTAL_USERS_COUNT
+    totalUsersCount: number
+}
+export const setTotalUsersCount = (totalUsersCount: number): SetTotalUsersCountActionType => ({type: SET_TOTAL_USERS_COUNT, totalUsersCount});
+
+type IsFetchingToggleActionType = {
+    type: typeof IS_FETCHING_TOGGLE
+    isFetching: boolean
+}
+export const isFetchingToggle = (isFetching: boolean): IsFetchingToggleActionType => ({type: IS_FETCHING_TOGGLE, isFetching});
+
+type IsFollowingProgress = {
+    type: typeof IS_FOLLOWING_PROGRESS
+    isFetching: boolean
+    userId: number
+}
+export const isFollowingProgress = (isFetching: boolean, userId: number): IsFollowingProgress => ({type: IS_FOLLOWING_PROGRESS, isFetching, userId});
+
+export const getUsers = (currentPage: number, pageSize: number) => async (dispatch: any) => {
     dispatch(isFetchingToggle(true));
     const response = await usersAPI.getUsers(currentPage, pageSize);
     dispatch(isFetchingToggle(false));
@@ -128,21 +170,21 @@ export const getUsers = (currentPage, pageSize) => async dispatch => {
     dispatch(setTotalUsersCount(response.data.totalCount));
 };
 
-export const getFriends = (maxFriends) => async dispatch => {
+export const getFriends = (maxFriends: number) => async (dispatch: any) => {
     dispatch(isFetchingToggle(true));
-    let friends = [];
+    let friends: Array<UserType> = [];
     let currentPage = 1;
     while (friends.length < maxFriends && currentPage < 8) {
         let response = await usersAPI.getUsers(currentPage, 100);
-        Array.prototype.push.apply(friends, response.data.items.filter(u => u.followed === true));
+        Array.prototype.push.apply(friends, response.data.items.filter((u: UserType) => u.followed === true));
         currentPage += 1
     }
     dispatch(setFriends(friends));
     dispatch(isFetchingToggle(false));
-    dispatch(setTotalUsersCount(friends));
+    //dispatch(setTotalUsersCount(friends.length)); В данном случае она кажется ничего не меняет
 };
 
-export const follow = userId => async dispatch => {
+export const follow = (userId: number) => async (dispatch: any) => {
     dispatch(isFollowingProgress(true, userId));
     const response = await usersAPI.follow(userId);
     if (response.data.resultCode === 0) {
@@ -152,7 +194,7 @@ export const follow = userId => async dispatch => {
 };
 
 
-export const unfollow = userId => async dispatch => {
+export const unfollow = (userId: number) => async (dispatch: any) => {
     dispatch(isFollowingProgress(true, userId));
     const response = await usersAPI.unfollow(userId);
     if (response.data.resultCode === 0) {

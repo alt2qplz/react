@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66e93105-e08d-4fa5-8191-f644ba4a3cb9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/build.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/reducers/auth-reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/reducers/dialogs-reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/app-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/app-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/auth-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/JS/auth-reducer-JS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/dialogs-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/JS/dialogs-reducer-JS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/profile-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/users-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/users-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +40,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1ZwHszKrQCUkuzLPOhmN0A6qDf9" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -46,7 +61,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TS" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -59,23 +74,23 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="settings.editor.selected.configurable" value="com.intellij.codeInsight.hints.config.SingleLanguageInlayHintsConfigurable" />
+    <property name="ts.external.directory.path" value="C:\react\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\react\src\redux\reducers" />
       <recent name="C:\react\src\components\PageNotFound" />
       <recent name="C:\react\src\components\EditProfile" />
       <recent name="C:\react\src\components" />
       <recent name="C:\react\src\components\Profile\Information" />
-      <recent name="C:\react\src\redux" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\react\src\redux\reducers\JS" />
       <recent name="C:\react\src\components\Profile\Information\ProfileStatusOld" />
       <recent name="C:\react\src\redux\selectors" />
       <recent name="C:\react\src\redux\reducers" />
       <recent name="C:\react\src\redux\store" />
-      <recent name="C:\react\src\redux\old-store" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -238,6 +253,13 @@
       <workItem from="1589980629109" duration="24000" />
       <workItem from="1590357610996" duration="4414000" />
       <workItem from="1590403745417" duration="1769000" />
+      <workItem from="1590416916666" duration="1104000" />
+      <workItem from="1590418035077" duration="522000" />
+      <workItem from="1590418685034" duration="4632000" />
+      <workItem from="1590585219807" duration="1239000" />
+      <workItem from="1590610619082" duration="3535000" />
+      <workItem from="1590614943093" duration="1941000" />
+      <workItem from="1590750180182" duration="1174000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 85 - hooks, useState, useEffect">
       <created>1588111720907</created>
@@ -272,53 +294,29 @@
     <option name="LAST_COMMIT_MESSAGE" value="lesson 85 - hooks, useState, useEffect" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="452" y="95" key="#ESLint" timestamp="1585940412571">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="452" y="95" key="#ESLint/0.0.1920.1040@0.0.1920.1040" timestamp="1585940412571" />
-    <state x="414" y="168" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587151136236">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="414" y="168" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587151136236" />
-    <state x="654" y="305" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587150903923">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="654" y="305" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587150903923" />
-    <state x="627" y="208" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587050306922">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="627" y="208" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587050306922" />
-    <state x="585" y="91" key="CommitChangelistDialog2" timestamp="1585934846344">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="585" y="91" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585934846344" />
-    <state x="540" y="348" key="Performance.Activity.Monitor" timestamp="1587728015172">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="540" y="348" key="Performance.Activity.Monitor/0.0.1920.1040@0.0.1920.1040" timestamp="1587728015172" />
-    <state x="199" y="125" width="1141" height="883" key="SettingsEditor" timestamp="1586997454675">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="199" y="125" width="1141" height="883" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586997454675" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1585757129033">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585757129033" />
-    <state x="92" y="92" width="1736" height="856" key="dock-window-1" timestamp="1586365511855">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="92" y="92" width="1736" height="856" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1586365511855" />
-    <state x="629" y="118" width="661" height="804" key="find.popup" timestamp="1585757138709">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="629" y="118" width="661" height="804" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585757138709" />
-    <state x="532" y="237" key="run.anything.popup" timestamp="1587574083249">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="532" y="237" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587574083249" />
-    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1587571596441">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587571596441" />
+    <state x="452" y="95" key="#ESLint" />
+    <state x="452" y="95" key="#ESLint/0.0.1920.1040@0.0.1920.1040" />
+    <state x="414" y="168" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
+    <state x="414" y="168" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" />
+    <state x="654" y="305" key="#com.intellij.fileTypes.FileTypeChooser" />
+    <state x="654" y="305" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" />
+    <state x="627" y="208" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" />
+    <state x="627" y="208" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" />
+    <state x="585" y="91" key="CommitChangelistDialog2" />
+    <state x="585" y="91" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" />
+    <state x="540" y="348" key="Performance.Activity.Monitor" />
+    <state x="540" y="348" key="Performance.Activity.Monitor/0.0.1920.1040@0.0.1920.1040" />
+    <state x="199" y="125" width="1141" height="883" key="SettingsEditor" />
+    <state x="199" y="125" width="1141" height="883" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-1" />
+    <state x="92" y="92" width="1736" height="856" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" />
+    <state x="629" y="118" width="661" height="804" key="find.popup" />
+    <state x="629" y="118" width="661" height="804" key="find.popup/0.0.1920.1040@0.0.1920.1040" />
+    <state x="532" y="237" key="run.anything.popup" />
+    <state x="532" y="237" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" />
+    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup" />
+    <state x="539" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" />
   </component>
 </project>

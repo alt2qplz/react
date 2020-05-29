@@ -1,4 +1,4 @@
-import {dialogsAPI} from "../../api/api";
+import {dialogsAPI} from "../../../api/api";
 
 const SET_DIALOGS = 'dialogs/SET_DIALOGS';
 const SET_MESSAGES = 'dialogs/SET_MESSAGES';
@@ -8,18 +8,7 @@ let initialState = {
     messagesData: [],
     dialogsData: [],
     isFetching: false,
-    currentProfile: {
-        "id": 7912,
-        "userName": "dozer",
-        "hasNewMessages": false,
-        "lastDialogActivityDate": "2020-05-18T13:41:11.187",
-        "lastUserActivityDate": "2020-05-18T13:41:17.703",
-        "newMessagesCount": 0,
-        "photos": {
-            "small": "https://social-network.samuraijs.com/activecontent/images/users/7912/user-small.jpg?v=1",
-            "large": "https://social-network.samuraijs.com/activecontent/images/users/7912/user.jpg?v=1"
-        }
-    }
+    currentProfile: null
 };
 
 const dialogReducer = (state = initialState, action) => {

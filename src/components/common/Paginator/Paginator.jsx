@@ -1,7 +1,10 @@
 import React, {useState} from "react";
 import s from './Paginator.module.css'
 
+
+
 const Paginator = props => {
+    debugger
     let pageCount = Math.ceil(props.totalUsersCount / props.pageSize);
 
     let pages = [];
