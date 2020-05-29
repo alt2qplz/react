@@ -3,21 +3,38 @@ import s from './User.module.css';
 import Preloader from "../common/Preloader/Preloader";
 import {NavLink} from "react-router-dom";
 import Paginator from "../common/Paginator/Paginator";
+import {UserType} from "../../types/types";
 
-const Users = (props) => {
+type PropsType = {
+    totalUsersCount: number
+    pageSize: number
+    onPageChanged: (pageNumber: number) => void
+    currentPage: number
+    isFetching: boolean
+    users: Array<UserType>
+    isAuth: boolean
+    followingInProgress: Array<number>
+    unfollow: (userId: number) => void
+    follow: (userId: number) => void
+}
 
-    let avatar = "https://www.w3schools.com/howto/img_avatar.png";
+const Users: React.FC<PropsType> = ({totalUsersCount, pageSize, onPageChanged,
+                                        currentPage, isFetching, users,
+                                        isAuth, followingInProgress, unfollow,
+                                        follow}) => {
+
+    let avatar: string = "https://www.w3schools.com/howto/img_avatar.png";
 
     return (
         <>
-            <Paginator totalUsersCount={props.totalUsersCount} pageSize={props.pageSize}
-                       onPageChanged={props.onPageChanged} currentPage={props.currentPage}
+            <Paginator totalUsersCount={totalUsersCount} pageSize={pageSize}
+                       onPageChanged={onPageChanged} currentPage={currentPage}
             />
 
-            {props.isFetching
+            {isFetching
                 ? <Preloader/>
                 : <div className={s.wrapper}>
-                    {props.users.map(u =>
+                    {users.map(u =>
                         <div key={u.id} className={`${s.user} white-container`}>
                             <NavLink to={'/profile/' + u.id}>
                                 <img src={u.photos.small != null ? u.photos.small : avatar} alt="avatar"
@@ -28,15 +45,15 @@ const Users = (props) => {
                                     <h3>{u.name}</h3>
                                     <p>{u.status != null ? u.status : ' '}</p>
                                 </div>
-                                {props.isAuth &&
+                                {isAuth &&
                                 (u.followed
-                                        ? <button disabled={props.followingInProgress.some(id => id === u.id)}
+                                        ? <button disabled={followingInProgress.some(id => id === u.id)}
                                                   className={s.unfollow} onClick={() => {
-                                            props.unfollow(u.id)
+                                            unfollow(u.id)
                                         }}>Отписаться</button>
-                                        : <button disabled={props.followingInProgress.some(id => id === u.id)}
+                                        : <button disabled={followingInProgress.some(id => id === u.id)}
                                                   className={s.follow} onClick={() => {
-                                            props.follow(u.id)
+                                            follow(u.id)
                                         }}>Подписаться</button>
                                 )
                                 }
