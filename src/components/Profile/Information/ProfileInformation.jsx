@@ -3,7 +3,6 @@ import s from "./Information.module.css";
 import "./social.css";
 import ProfileStatus from "./ProfileStatus";
 import cn from 'classnames';
-import {setUserFollowStatus} from "../../../redux/reducers/profile-reducer";
 
 const Avatar = props => {
     return (
@@ -13,7 +12,7 @@ const Avatar = props => {
     )
 };
 
-const Information = (props) => {
+const ProfileInformation = (props) => {
 
     const onMainPhotoSelected = (e) => {
         if (e.target.files.length !== 0) {
@@ -72,7 +71,7 @@ const Information = (props) => {
                         {props.isOwner
                             ? <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
                             : <div className={s.status}>
-                                <span>{props.status || 'no status'}</span>
+                                <span>{props.status || ' '}</span>
                             </div>
                         }
                         <div className={s.description}>
@@ -135,4 +134,4 @@ const Contact = ({contactTitle, contactValue}) => {
     </div>
 };
 
-export default Information;
+export default ProfileInformation;

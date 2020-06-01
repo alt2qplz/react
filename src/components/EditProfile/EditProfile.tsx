@@ -1,16 +1,18 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import s from './EditProfile.module.css';
 import {Field, reduxForm} from "redux-form";
 import {InputStandard} from "../common/FormControls/FormControls";
 import {required} from "../../utils/validators";
-import {compose} from "redux";
-import {connect} from "react-redux";
-import withAuthRedirect from "../../hoc/withAuthRedirect";
-import {withRouter} from "react-router-dom";
-import {getProfile, updateProfile} from "../../redux/reducers/profile-reducer";
-import Preloader from "../common/Preloader/Preloader";
+import {ProfileType} from "../../types/types";
 
-let EditProfile = (props) => {
+type PropsType = {
+    onSubmit: (formData: any) => void
+    initialValues: ProfileType
+    handleSubmit: any
+    error: string
+}
+
+let EditProfile: React.FC<any> = (props) => {
     return (
         <div className={'white-container'}>
             <form onSubmit={props.handleSubmit} className={s.editProfile}>
@@ -58,46 +60,18 @@ let EditProfile = (props) => {
     )
 };
 
-const ContactField = ({contactTitle}) => {
+type ContactFieldPropsType = {
+    key: string
+    contactTitle: string
+}
+
+const ContactField: React.FC<ContactFieldPropsType> = ({contactTitle}) => {
     return <div className={s.editProfileField}>
         <p>{contactTitle}</p>
         <Field type={"text"} name={`contacts.${contactTitle}`} component={InputStandard} placeholder={contactTitle}/>
     </div>
 };
 
-EditProfile = reduxForm({
+export default reduxForm({
     form: 'editProfile'
 })(EditProfile);
-
-const EditProfileContainer = props => {
-
-    const [profile, setProfile] = useState(props.profile);
-
-    useEffect(() => {
-        setProfile(props.profile)
-    }, [props.profile]);
-
-    let submit = formData => {
-        props.updateProfile(formData).then(() => {
-            props.history.push('/profile')
-        })
-    };
-
-    if (profile === null) {
-        props.getProfile(props.id);
-        return <Preloader/>
-    }
-
-    return <EditProfile onSubmit={submit} initialValues={profile}/>
-};
-
-const mapStateToProps = (state) => ({
-    profile: state.profilePage.profile,
-    id: state.auth.id
-});
-
-export default compose(
-    connect(mapStateToProps, {updateProfile, getProfile}),
-    withRouter,
-    withAuthRedirect
-)(EditProfileContainer)

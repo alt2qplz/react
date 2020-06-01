@@ -5,18 +5,21 @@ import {NavLink} from "react-router-dom";
 import Paginator from "../common/Paginator/Paginator";
 import {UserType} from "../../types/types";
 
-type PropsType = {
+type OwnPropsType = {
     totalUsersCount: number
     pageSize: number
-    onPageChanged: (pageNumber: number) => void
     currentPage: number
     isFetching: boolean
     users: Array<UserType>
     isAuth: boolean
     followingInProgress: Array<number>
+
     unfollow: (userId: number) => void
     follow: (userId: number) => void
+    onPageChanged: (pageNumber: number) => void
 }
+
+type PropsType = OwnPropsType
 
 const Users: React.FC<PropsType> = ({totalUsersCount, pageSize, onPageChanged,
                                         currentPage, isFetching, users,

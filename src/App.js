@@ -18,7 +18,7 @@ const Login = lazy(() => import('./components/Login/Login'));
 const FriendsContainer = lazy(() => import('./components/Friends/FriendsContainer'));
 const Games = lazy(() => import('./components/Games/Games'));
 const PageNotFound = lazy(() => import('./components/PageNotFound/PageNotFound'));
-const EditProfileContainer = lazy(() => import('./components/EditProfile/EditProfile'));
+const EditProfileContainer = lazy(() => import('./components/EditProfile/EditProfileContainer'));
 const CowsBulls = lazy(() => import('./components/BullsAndCows/BullsAndCows'));
 
 

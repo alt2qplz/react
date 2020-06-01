@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66e93105-e08d-4fa5-8191-f644ba4a3cb9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/EditProfile/EditProfileContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/selectors/users-selector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectors/users-selector.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store/redux-store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditProfile/EditProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditProfile/EditProfile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Information/Information.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Information/ProfileInformation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Information/ProfileStatus.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Information/ProfileStatus.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/app-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/app-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/auth-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/auth-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/profile-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/profile-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/users-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/users-reducer.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +59,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/EditProfile" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -71,19 +76,19 @@
     <property name="ts.external.directory.path" value="C:\react\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\react\src\redux\reducers" />
-      <recent name="C:\react\src\components\PageNotFound" />
-      <recent name="C:\react\src\components\EditProfile" />
-      <recent name="C:\react\src\components" />
-      <recent name="C:\react\src\components\Profile\Information" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\react\src\redux\reducers\JS" />
       <recent name="C:\react\src\components\Profile\Information\ProfileStatusOld" />
       <recent name="C:\react\src\redux\selectors" />
       <recent name="C:\react\src\redux\reducers" />
       <recent name="C:\react\src\redux\store" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\react\src\components\EditProfile" />
+      <recent name="C:\react\src\redux\reducers" />
+      <recent name="C:\react\src\components\PageNotFound" />
+      <recent name="C:\react\src\components" />
+      <recent name="C:\react\src\components\Profile\Information" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -253,7 +258,7 @@
       <workItem from="1590610619082" duration="3535000" />
       <workItem from="1590614943093" duration="1941000" />
       <workItem from="1590750180182" duration="7108000" />
-      <workItem from="1590765953532" duration="763000" />
+      <workItem from="1590765953532" duration="10139000" />
     </task>
     <task id="LOCAL-00001" summary="lesson 85 - hooks, useState, useEffect">
       <created>1588111720907</created>

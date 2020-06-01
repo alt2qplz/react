@@ -1,6 +1,8 @@
 import {profileAPI, usersAPI} from "../../api/api";
 import {stopSubmit} from "redux-form";
 import {PhotosType, PostsDataType, ProfileType} from "../../types/types";
+import {ThunkAction} from "redux-thunk";
+import {AppStateType} from "../store/redux-store";
 
 const ADD_POST = 'profile/ADD-POST';
 const SET_USER_PROFILE = 'profile/SET_USER_PROFILE';
@@ -31,7 +33,7 @@ let initialState = {
 
 export type InitialStateType = typeof initialState
 
-const profileReducer = (state = initialState, action: any): InitialStateType => {
+const profileReducer = (state = initialState, action: ProfileReducerActionTypes): InitialStateType => {
     switch (action.type) {
         case ADD_POST: {
             return {
@@ -88,6 +90,15 @@ const profileReducer = (state = initialState, action: any): InitialStateType => 
 
 };
 
+type ProfileReducerActionTypes =
+    AddPostActionType
+    | DeletePostActionType
+    | SetUserProfileActionType
+    | SetUserProfileStatusActionType
+    | SetUserFollowStatusActionType
+    | SetUserPhotoSuccessActionType
+    | IsFetchingType
+
 type AddPostActionType = {
     type: typeof ADD_POST
     newPostText: string
@@ -110,19 +121,28 @@ type SetUserProfileStatusActionType = {
     type: typeof SET_USER_PROFILE_STATUS,
     status: string
 }
-export const setUserProfileStatus = (status: string): SetUserProfileStatusActionType => ({type: SET_USER_PROFILE_STATUS, status});
+export const setUserProfileStatus = (status: string): SetUserProfileStatusActionType => ({
+    type: SET_USER_PROFILE_STATUS,
+    status
+});
 
 type SetUserFollowStatusActionType = {
     type: typeof SET_USER_FOLLOW_STATUS
     userFollowStatus: boolean
 }
-export const setUserFollowStatus = (userFollowStatus: boolean): SetUserFollowStatusActionType => ({type: SET_USER_FOLLOW_STATUS, userFollowStatus});
+export const setUserFollowStatus = (userFollowStatus: boolean): SetUserFollowStatusActionType => ({
+    type: SET_USER_FOLLOW_STATUS,
+    userFollowStatus
+});
 
 type SetUserPhotoSuccessActionType = {
     type: typeof SET_USER_PHOTO_SUCCESS
     photos: PhotosType
 }
-export const setUserPhotoSuccess = (photos: PhotosType): SetUserPhotoSuccessActionType => ({type: SET_USER_PHOTO_SUCCESS, photos});
+export const setUserPhotoSuccess = (photos: PhotosType): SetUserPhotoSuccessActionType => ({
+    type: SET_USER_PHOTO_SUCCESS,
+    photos
+});
 
 type IsFetchingType = {
     type: typeof IS_FETCHING
@@ -130,7 +150,12 @@ type IsFetchingType = {
 }
 export const isFetchingToggle = (isFetching: boolean): IsFetchingType => ({type: IS_FETCHING, isFetching});
 
-export const getProfile = (userId: number) => async (dispatch: any) => {
+
+//thunks
+
+type ThunkType = ThunkAction<Promise<void>, AppStateType, unknown, ProfileReducerActionTypes>
+
+export const getProfile = (userId: number): ThunkType => async (dispatch) => {
     dispatch(isFetchingToggle(true));
     const response = await profileAPI.getProfileInfo(userId);
     dispatch(setUserProfile(response.data));
@@ -138,36 +163,37 @@ export const getProfile = (userId: number) => async (dispatch: any) => {
     dispatch(isFetchingToggle(false));
 };
 
-export const getStatus = (userId: number) => async (dispatch: any) => {
+export const getStatus = (userId: number): ThunkType => async (dispatch) => {
     const response = await profileAPI.getProfileStatus(userId);
     dispatch(setUserProfileStatus(response.data))
 };
 
-export const checkFollow = (userId: number) => async (dispatch: any) => {
+export const checkFollow = (userId: number): ThunkType => async (dispatch) => {
     const response = await usersAPI.checkFollow(userId);
     dispatch(setUserFollowStatus(response.data))
 };
 
-export const updateStatus = (status: string) => async (dispatch: any) => {
+export const updateStatus = (status: string): ThunkType => async (dispatch) => {
     const response = await profileAPI.updateProfileStatus(status);
     if (response.data.resultCode === 0) {
         dispatch(setUserProfileStatus(status))
     }
 };
 
-export const updatePhoto = (photoFile: any) => async (dispatch: any) => {
+export const updatePhoto = (photoFile: any): ThunkType => async (dispatch) => {
     const response = await profileAPI.updateProfilePhoto(photoFile);
     if (response.data.resultCode === 0) {
         dispatch(setUserPhotoSuccess(response.data.data.photos))
     }
 };
 
-export const updateProfile = (profile: ProfileType) => async (dispatch: any) => {
+export const updateProfile = (profile: ProfileType): ThunkType => async (dispatch) => {
     const response = await profileAPI.updateProfileInfo(profile);
     if (response.data.resultCode === 0) {
         dispatch(setUserProfile(profile))
     } else {
         let message = response.data.messages.length > 0 ? response.data.messages[0] : 'Some error';
+        // @ts-ignore
         dispatch(stopSubmit('editProfile', {_error: message}));
         return Promise.reject();
     }

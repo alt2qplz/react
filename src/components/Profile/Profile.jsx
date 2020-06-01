@@ -1,8 +1,7 @@
 import React from "react";
-import Information from "./Information/Information";
+import ProfileInformation from "./Information/ProfileInformation";
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
 import Preloader from "../common/Preloader/Preloader";
-import {setUserFollowStatus} from "../../redux/reducers/profile-reducer";
 
 const Profile = (props) => {
 
@@ -12,19 +11,19 @@ const Profile = (props) => {
 
     return (
         <div>
-            <Information profile={props.profile}
-                         status={props.status}
-                         updateStatus={props.updateStatus}
-                         isOwner={props.isOwner}
-                         updatePhoto={props.updatePhoto}
-                         isFetching={props.isFetching}
-                         followingInProgress={props.followingInProgress}
-                         users={props.users}
-                         follow={props.follow}
-                         unfollow={props.unfollow}
-                         userFollowStatus={props.userFollowStatus}
-                         setUserFollowStatus={props.setUserFollowStatus}
-                         checkFollow={props.checkFollow}
+            <ProfileInformation profile={props.profile}
+                                status={props.status}
+                                updateStatus={props.updateStatus}
+                                isOwner={props.isOwner}
+                                updatePhoto={props.updatePhoto}
+                                isFetching={props.isFetching}
+                                followingInProgress={props.followingInProgress}
+                                users={props.users}
+                                follow={props.follow}
+                                unfollow={props.unfollow}
+                                userFollowStatus={props.userFollowStatus}
+                                setUserFollowStatus={props.setUserFollowStatus}
+                                checkFollow={props.checkFollow}
             />
             {props.isOwner &&
             <MyPostsContainer/>
